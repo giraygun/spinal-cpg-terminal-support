@@ -1,0 +1,101 @@
+{
+  "analysis_version": "cpg-v2.6.2-manuscript-e-f-1.0",
+  "generated_utc": "2026-08-26T18:12:32+00:00",
+  "script_sha256": "d0bde0ec0552c341e5ead1b4598d63352fb999a1674433bd60a7c7c3d3287ac0",
+  "source_sha256": {
+    "analysis_task_index.csv": "d61f30873a1a5c0c3150c58cd97ca0842e2340be281697a7ae447055d94fc095",
+    "metrics.csv": "aac42c01231cd8b3057ceaba806ca8bd68e207c94c8b500ec302acfe425e72ab",
+    "unique_simulation_metrics.csv": "67889dd949276991ea79bca10a67268b7a430a393687b42bfff4a36b19b84ee4",
+    "long_epoch_metrics.csv": "8edeceaf70f143ae5d3c9b6efbfb29f743af76b987a3163f16ae0d6420b83755",
+    "experiment_plan_single_realization_v2_6_2.json": "62a3bc1d5cf94e3369c5f3a32f30486960f96b8606580599eb9fb45924889875",
+    "single_realization_contrasts_v2_6_2.csv": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4"
+  },
+  "protocol_spec_sha256": "ac36628fef7684bc08672b4c0678d32822a62f1b86b86ed9e5e19afa29f97220",
+  "output_row_count": 1,
+  "independent_stochastic_realization_count": 1,
+  "inferential_scope": "conditional_on_one_frozen_realization_no_population_inference",
+  "files": [
+    {
+      "name": "e_f_e_phase_recovery_atomic.csv",
+      "sha256": "837e13f3ace3c8dc8a8338d79fc70b368839978b12074dab10669ebebd115a7c",
+      "row_count": 1620
+    },
+    {
+      "name": "e_f_e_phase_recovery_summary.csv",
+      "sha256": "d2a1c9db3bb566674c881e1eac711826ca2b76c780eb050069d249100ef87fb5",
+      "row_count": 180
+    },
+    {
+      "name": "e_f_e_propagation_atomic.csv",
+      "sha256": "f7843fc8b5f02bac4fec64cb17f80e705e12a436208a6ba0fcdd3a8a88c5a748",
+      "row_count": 1890
+    },
+    {
+      "name": "e_f_e_propagation_summary.csv",
+      "sha256": "2c7ecbe718af2a3686fce3cabc1c71abc9e9addabc3eeb87400f5dad4e1147e5",
+      "row_count": 210
+    },
+    {
+      "name": "e_f_e_terminal_state_atomic.csv",
+      "sha256": "b7ba81783568d53e358a6f03cab70b0bca7481fb71be5532de44b14da8c6d9b3",
+      "row_count": 810
+    },
+    {
+      "name": "e_f_e_terminal_state_summary.csv",
+      "sha256": "26fc803528727e0ce6aa811c67e78fef4f79298b6b9d11012b873a10d753897a",
+      "row_count": 90
+    },
+    {
+      "name": "e_f_e_failure_transitions.csv",
+      "sha256": "dd41c7a04290e5f5333922d62a49a72d66bde2dd34154371c2b3c502ade2213f",
+      "row_count": 120
+    },
+    {
+      "name": "e_f_f_phase_recovery_atomic.csv",
+      "sha256": "888d167645c803dd1d5927a31072e0e66b1e9b5a1a2ad97a43e6403a1fc3ff71",
+      "row_count": 16200
+    },
+    {
+      "name": "e_f_f_phase_recovery_summary.csv",
+      "sha256": "e04b24569b172a88e2f55c9c02fd8221cb27ab284f5ad5acafcabcbba40dc871",
+      "row_count": 1800
+    },
+    {
+      "name": "e_f_f_propagation_atomic.csv",
+      "sha256": "46b08523690022ac5093e871fa708e882b886a9831e6eff06b83784a2db81927",
+      "row_count": 18900
+    },
+    {
+      "name": "e_f_f_propagation_summary.csv",
+      "sha256": "ee90b9c9fca8c30de9388317e033d5ab0ca88a8856cb2b8b41d8259837a7d683",
+      "row_count": 2100
+    },
+    {
+      "name": "e_f_f_terminal_state_atomic.csv",
+      "sha256": "9d6d57811af64e5897ebf9eafba937d20fc5521717366f6cf2e398e1a01df08a",
+      "row_count": 8100
+    },
+    {
+      "name": "e_f_f_terminal_state_summary.csv",
+      "sha256": "faee9522e31680754f493a069f62c21e5e6427108ae7cad03f639e0d39b46d92",
+      "row_count": 900
+    },
+    {
+      "name": "e_f_f_diagonal_off_diagonal_summary.csv",
+      "sha256": "b847b922d823e383abfa8a6082e1887cc79ece9a026f5f4f87b72703b4c1e089",
+      "row_count": 96
+    },
+    {
+      "name": "e_f_f_failure_patterns.csv",
+      "sha256": "5c6dae4d5381e397098d5b11f01bfb15aed893d4429e6a4efc1a0b427742be96",
+      "row_count": 302
+    },
+    {
+      "name": "e_f_qc.json",
+      "sha256": "487c1461f34bae79ab2ce58a873d44bcc2c587f6d5b1933cfd2505e146324db4",
+      "row_count": 1
+    }
+  ],
+  "qc_file": "e_f_qc.json",
+  "qc_pass": true
+}

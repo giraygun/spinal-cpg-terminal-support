@@ -1,0 +1,156 @@
+{
+  "schema": "cpg-manuscript-analysis-protocol-1.0",
+  "status": "locked",
+  "locked_date": "2026-08-26",
+  "seed": 601,
+  "structural_seed": 160601,
+  "independent_stochastic_realizations": 1,
+  "source_directory": "../single_realization_results_v2_6_2",
+  "source_sha256": {
+    "analysis_task_index.csv": "d61f30873a1a5c0c3150c58cd97ca0842e2340be281697a7ae447055d94fc095",
+    "metrics.csv": "aac42c01231cd8b3057ceaba806ca8bd68e207c94c8b500ec302acfe425e72ab",
+    "unique_simulation_metrics.csv": "67889dd949276991ea79bca10a67268b7a430a393687b42bfff4a36b19b84ee4",
+    "long_epoch_metrics.csv": "8edeceaf70f143ae5d3c9b6efbfb29f743af76b987a3163f16ae0d6420b83755",
+    "experiment_plan_single_realization_v2_6_2.json": "62a3bc1d5cf94e3369c5f3a32f30486960f96b8606580599eb9fb45924889875",
+    "single_realization_contrasts_v2_6_2.csv": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4"
+  },
+  "expected_counts": {
+    "analysis_tasks": 11686,
+    "unique_simulations": 3610,
+    "avoided_recomputations": 8076,
+    "long_epoch_rows": 744,
+    "stage_tasks": {
+      "A": 27,
+      "B": 270,
+      "C": 162,
+      "D": 54,
+      "E": 270,
+      "F": 10800,
+      "G": 31,
+      "H": 72
+    },
+    "stage_unique_simulations": {
+      "A": 27,
+      "B": 270,
+      "C": 162,
+      "D": 54,
+      "E": 270,
+      "F": 3267,
+      "G": 31,
+      "H": 72
+    }
+  },
+  "axes": {
+    "speed": ["low", "medium", "high"],
+    "load": ["normal", "unilateral", "bilateral_high"],
+    "pulse": ["none", "excitatory", "inhibitory"],
+    "single_interventions": ["V1Ia", "V1Ren", "V2b", "V2a", "V0D", "V0V", "V3", "Ia", "Ib", "groupI"],
+    "paired_interventions": ["V0D+V0V", "V1Ia+V2b", "V2a+V0V", "V1Ren+V2b", "V3+Ia", "V3+Ib"],
+    "classes": ["RG", "PF", "MN", "V0D", "V0V", "V2a", "V3", "V1Ia", "V1Ren", "V2b"],
+    "routes": ["RG", "PF", "MN", "V0D", "V0V", "V2a", "V3", "V1Ia", "V1Ren", "V2b"],
+    "mt_modes": ["dynamic", "static_matched", "time_yoked", "spatial_shuffled", "impaired", "off"],
+    "fast_modes": ["dynamic", "static_mean", "yoked", "off"]
+  },
+  "endpoints": {
+    "primary": [
+      "lr_phase_error_mean_abs_deg",
+      "fe_phase_error_mean_abs_deg",
+      "lr_phase_slip_count",
+      "lr_phase_cycle_count",
+      "fe_phase_slip_count",
+      "fe_phase_cycle_count",
+      "rhythmic_failure",
+      "pulse_response_eligible",
+      "recovery_endpoint_eligible",
+      "recovery_event_observed",
+      "recovery_time_s",
+      "recovery_time_or_censor_s",
+      "recovery_censor_time_s"
+    ],
+    "secondary": [
+      "frequency_hz",
+      "rg_cycle_interval_cv_mean",
+      "bilateral_amplitude_imbalance",
+      "pf_transfer_anchor_count",
+      "pf_transfer_missed_count",
+      "mn_transfer_anchor_count",
+      "mn_transfer_missed_count",
+      "rg_pf_latency_mean_ms",
+      "rg_mn_latency_mean_ms"
+    ],
+    "pulse": [
+      "post_pulse_lr_phase_error_mean_abs_deg",
+      "post_pulse_fe_phase_error_mean_abs_deg",
+      "post_pulse_lr_phase_slip_count",
+      "post_pulse_lr_phase_cycle_count",
+      "post_pulse_fe_phase_slip_count",
+      "post_pulse_fe_phase_cycle_count",
+      "sham_excitatory_lr_phase_error_mean_abs_deg",
+      "sham_excitatory_fe_phase_error_mean_abs_deg",
+      "sham_inhibitory_lr_phase_error_mean_abs_deg",
+      "sham_inhibitory_fe_phase_error_mean_abs_deg"
+    ],
+    "participation": [
+      "RG_mean_rate_hz",
+      "PF_mean_rate_hz",
+      "MN_mean_rate_hz",
+      "V0D_mean_rate_hz",
+      "V0V_mean_rate_hz",
+      "V2a_mean_rate_hz",
+      "V3_mean_rate_hz",
+      "V1Ia_mean_rate_hz",
+      "V1Ren_mean_rate_hz",
+      "V2b_mean_rate_hz"
+    ]
+  },
+  "pairing": {
+    "A_pulse_sham": ["seed", "protocol", "speed", "load", "load_side"],
+    "B_C_E_to_A": ["seed", "protocol", "speed", "load", "load_side", "pulse"],
+    "F_cells": ["seed", "protocol", "speed", "load", "load_side", "pulse", "intended_class", "intended_route"],
+    "G_epoch": ["simulation_id", "epoch"],
+    "H_mt": ["seed", "protocol", "speed", "load", "load_side", "pulse", "fast_mode"],
+    "H_fast": ["seed", "protocol", "speed", "load", "load_side", "pulse", "mt_mode"]
+  },
+  "formulas": {
+    "paired_effect": "intervention - matched_reference",
+    "C_nonadditivity": "pair - single_A - single_B + intact",
+    "F_nonadditivity": "A1M1 - A1M0 - A0M1 + A0M0",
+    "G_challenge_by_impairment": "(challenge_impaired - no_challenge_impaired) - (challenge_intact - no_challenge_intact)",
+    "H_mt_contrast": "dynamic - comparator",
+    "H_fast_by_mt": "MT_contrast_at_fast_mode - MT_contrast_at_dynamic_fast"
+  },
+  "long_windows": {
+    "baseline": [2, 3, 4, 5, 6],
+    "stress_prechallenge": [7, 8, 9, 10, 11, 12],
+    "stress_challenge": [13, 14, 15, 16, 17, 18],
+    "recovery": [20, 21, 22, 23, 24],
+    "display_only_transition": [1, 19]
+  },
+  "failure_policy": {
+    "technical_invalid_excluded": true,
+    "rhythmic_failure_is_biological": true,
+    "pulse_nondelivery_is_biological": true,
+    "continuous_effect_requires_complete_pair": true,
+    "recovery_main_uses_full_followup_event_and_censor": true,
+    "four_second_recovery_cap_is_preregistration_sensitivity_only": true,
+    "blank_is_zero": false,
+    "failure_transition_order": [
+      "rhythmic_to_rhythmic",
+      "rhythmic_to_failure",
+      "failure_to_rhythmic",
+      "failure_to_failure"
+    ]
+  },
+  "forbidden_inference_fields": [
+    "p_value",
+    "pvalue",
+    "confidence_interval",
+    "ci_lower",
+    "ci_upper",
+    "standard_error",
+    "se",
+    "degrees_of_freedom",
+    "df",
+    "cohen_d"
+  ]
+}

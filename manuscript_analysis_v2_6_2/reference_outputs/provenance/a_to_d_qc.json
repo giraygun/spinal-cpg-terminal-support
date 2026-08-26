@@ -1,0 +1,185 @@
+{
+  "analysis_scope": "Stages A-D; one frozen stochastic realization; descriptive exact contrasts",
+  "design_checks": {
+    "A_active_pulse_vs_matched_sham_pairs": 18,
+    "A_intact_no_pulse_cells": 9,
+    "B_single_context_pairs": 270,
+    "C_component_single_arms_complete": true,
+    "C_pair_context_quads": 162,
+    "D_condition_rows": 54,
+    "D_recruitment_rows": 540,
+    "D_speed_effect_difference_rows": 240,
+    "blank_values_not_coerced_to_zero": true,
+    "continuous_values_require_complete_pairs_or_quads": true,
+    "descriptive_quantile_method": "linear interpolation at (n-1)*p",
+    "failure_transitions_preserved": true,
+    "neutral_tolerance": 1e-12,
+    "simulation_ids_not_counted_as_replicates": true
+  },
+  "generated_at_utc": "2026-08-26T18:12:31+00:00",
+  "global_source_checks": {
+    "all_transfer_identities_hold": true,
+    "analysis_task_count": 11686,
+    "avoided_recomputation_count": 8076,
+    "long_epoch_row_count": 744,
+    "task_identity_and_design_fields_match": true,
+    "transfer_identity_checks": 23372,
+    "unique_simulation_count": 3610,
+    "unique_simulation_identity_sets_match": true
+  },
+  "inference_boundary": {
+    "forbidden_inference_fields": [
+      "ci_lower",
+      "ci_upper",
+      "cohen_d",
+      "confidence_interval",
+      "degrees_of_freedom",
+      "df",
+      "p_value",
+      "pvalue",
+      "se",
+      "standard_error"
+    ],
+    "forbidden_inference_fields_present_in_outputs": false,
+    "independent_stochastic_realizations": 1,
+    "sampling_inference_calculated": false
+  },
+  "locked_protocol_hashes": {
+    "ANALYSIS_PROTOCOL_LOCKED_2026-08-26.md": "cf2fef52687428f0eab74fc123ceb2a36cb6d0fc70d5442d221c955a4753ae2f",
+    "PROTOCOL_SPEC.json": "ac36628fef7684bc08672b4c0678d32822a62f1b86b86ed9e5e19afa29f97220"
+  },
+  "outputs": {
+    "a_to_d_a_intact_no_pulse_grid.csv": {
+      "field_count": 41,
+      "forbidden_inference_fields_present": false,
+      "row_count": 9,
+      "sha256": "c75c95dbee6f60b5c0b582ad715c7e1c34ea2fc0e42d139b04b5d313a5b7e237"
+    },
+    "a_to_d_a_pulse_vs_matched_sham.csv": {
+      "field_count": 58,
+      "forbidden_inference_fields_present": false,
+      "row_count": 18,
+      "sha256": "3b9616ba814322c5205cbd63b56cebac82ccb30666e44250cb0912072b3499d7"
+    },
+    "a_to_d_b_single_continuous_effects.csv": {
+      "field_count": 39,
+      "forbidden_inference_fields_present": false,
+      "row_count": 4320,
+      "sha256": "d68dacb90e73d8a3c6c028e6bdf6437e4f58bfbe3af8f99830471410858c2b0e"
+    },
+    "a_to_d_b_single_states.csv": {
+      "field_count": 40,
+      "forbidden_inference_fields_present": false,
+      "row_count": 270,
+      "sha256": "0891fcfe8c6fa854e82a2ad2b7323a1b503ae9b633e35a5759618a99c05f41d9"
+    },
+    "a_to_d_c_pair_continuous_effects.csv": {
+      "field_count": 59,
+      "forbidden_inference_fields_present": false,
+      "row_count": 2592,
+      "sha256": "591829a3404def3c5133d0576c083daa5fd40980fb4767eb2f479eef38962e45"
+    },
+    "a_to_d_c_pair_states.csv": {
+      "field_count": 62,
+      "forbidden_inference_fields_present": false,
+      "row_count": 162,
+      "sha256": "879385d9a6ab0b963bf1e539e448760507280c12c94af25995f0f55aa31f2434"
+    },
+    "a_to_d_d_conditions.csv": {
+      "field_count": 29,
+      "forbidden_inference_fields_present": false,
+      "row_count": 54,
+      "sha256": "3cbfe91823b8881a418fd1601b173c902a8fd01e0274bc3a0462fb186fde7762"
+    },
+    "a_to_d_d_recruitment_rates.csv": {
+      "field_count": 24,
+      "forbidden_inference_fields_present": false,
+      "row_count": 540,
+      "sha256": "ec5e303a9d229862ae1348aca4d8b16172a7accf2b1cb71e9074f9ec78b74123"
+    },
+    "a_to_d_d_speed_effect_differences.csv": {
+      "field_count": 41,
+      "forbidden_inference_fields_present": false,
+      "row_count": 240,
+      "sha256": "0e7402263d406a3a201cb9ed5858d610fd74802b2a0bce7e71dce1ac67322f04"
+    },
+    "a_to_d_descriptive_summaries.csv": {
+      "field_count": 33,
+      "forbidden_inference_fields_present": false,
+      "row_count": 1304,
+      "sha256": "f38c8ab4c71aadf4b000601843a4cf81653e91764840988411b59f3a429c6f46"
+    },
+    "a_to_d_stage_inventory.csv": {
+      "field_count": 23,
+      "forbidden_inference_fields_present": false,
+      "row_count": 4,
+      "sha256": "cd2ed4ee097c0394313c3e2d79e37515c337fef6d17cbe945485020730855c0a"
+    }
+  },
+  "record_count": 1,
+  "schema": "cpg-manuscript-a-to-d-analysis-qc-1.0",
+  "script": {
+    "path": "manuscript_analysis_v2_6_2/scripts/analyze_a_to_d.py",
+    "sha256": "a0b23907336269b78a7cfd2eb7057232c7afcf87129f8a4c9d0f5e93faa0a5ef",
+    "version": "1.0.0"
+  },
+  "sources": {
+    "analysis_task_index.csv": {
+      "actual": "d61f30873a1a5c0c3150c58cd97ca0842e2340be281697a7ae447055d94fc095",
+      "expected": "d61f30873a1a5c0c3150c58cd97ca0842e2340be281697a7ae447055d94fc095",
+      "verified": true
+    },
+    "experiment_plan_single_realization_v2_6_2.json": {
+      "actual": "62a3bc1d5cf94e3369c5f3a32f30486960f96b8606580599eb9fb45924889875",
+      "expected": "62a3bc1d5cf94e3369c5f3a32f30486960f96b8606580599eb9fb45924889875",
+      "verified": true
+    },
+    "long_epoch_metrics.csv": {
+      "actual": "8edeceaf70f143ae5d3c9b6efbfb29f743af76b987a3163f16ae0d6420b83755",
+      "expected": "8edeceaf70f143ae5d3c9b6efbfb29f743af76b987a3163f16ae0d6420b83755",
+      "verified": true
+    },
+    "metrics.csv": {
+      "actual": "aac42c01231cd8b3057ceaba806ca8bd68e207c94c8b500ec302acfe425e72ab",
+      "expected": "aac42c01231cd8b3057ceaba806ca8bd68e207c94c8b500ec302acfe425e72ab",
+      "verified": true
+    },
+    "single_realization_contrasts_v2_6_2.csv": {
+      "actual": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4",
+      "expected": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4",
+      "verified": true
+    },
+    "unique_simulation_metrics.csv": {
+      "actual": "67889dd949276991ea79bca10a67268b7a430a393687b42bfff4a36b19b84ee4",
+      "expected": "67889dd949276991ea79bca10a67268b7a430a393687b42bfff4a36b19b84ee4",
+      "verified": true
+    }
+  },
+  "stage_checks": {
+    "A": {
+      "analysis_valid_task_count": 27,
+      "rhythmic_failure_task_count": 0,
+      "task_count": 27,
+      "unique_simulation_count": 27
+    },
+    "B": {
+      "analysis_valid_task_count": 270,
+      "rhythmic_failure_task_count": 0,
+      "task_count": 270,
+      "unique_simulation_count": 270
+    },
+    "C": {
+      "analysis_valid_task_count": 162,
+      "rhythmic_failure_task_count": 0,
+      "task_count": 162,
+      "unique_simulation_count": 162
+    },
+    "D": {
+      "analysis_valid_task_count": 54,
+      "rhythmic_failure_task_count": 0,
+      "task_count": 54,
+      "unique_simulation_count": 54
+    }
+  },
+  "status": "PASS"
+}

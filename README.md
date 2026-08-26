@@ -6,9 +6,10 @@ the complete outputs used for the accompanying manuscript on terminal-local,
 MT-associated slow vesicle replenishment.
 
 **Status:** this is a validated prepublication package. The frozen simulator and
-completed outputs are final. Manuscript-specific statistical summaries, table
-builders, and figure builders will be added as read-only post-run analysis files
-before the public v2.6.2 release; they must not alter the frozen core or outputs.
+completed outputs are final. The read-only manuscript analysis, tables, panel
+data, and figures are included under `manuscript_analysis_v2_6_2/`; they do not
+alter the frozen core or outputs. No final public tag or archival release has
+been issued yet.
 
 ## Scientific identity
 
@@ -33,11 +34,11 @@ reviewer analyses must write to `derived/` or another new directory.
 | A | Intact multi-context scan | 27 |
 | B | Single circuit interruptions | 270 |
 | C | Prespecified paired interruptions | 162 |
-| D | Speed-dependent participation control | 54 |
-| E | Route-specific terminal MT impairment | 270 |
-| F | Population x route x mechanism factorial | 10,800 |
-| G | Prolonged demand, depletion, and recovery | 31 |
-| H | KCa x terminal-support mechanism controls | 72 |
+| D | Descending-drive recruitment control | 54 |
+| E | Route-specific phenomenological terminal-support impairment | 270 |
+| F | Model-population x route x mechanism factorial | 10,800 |
+| G | Composite neural, synaptic, and mechanical stress | 31 |
+| H | KCa x phenomenological terminal-support controls | 72 |
 | **Total** |  | **11,686** |
 
 Tasks with identical complete simulator inputs are stored once. This leaves
@@ -55,8 +56,9 @@ structural seed `160601`.
 
 ## Quick start
 
-CPython 3.12.x is required. The directly frozen scientific dependencies are
-NumPy 2.3.5, SciPy 1.17.0, and Matplotlib 3.10.8.
+CPython 3.12.x is required. The frozen simulator uses NumPy 2.3.5, SciPy
+1.17.0, and Matplotlib 3.10.8. The reviewer lock also includes the read-only
+publication-analysis dependencies.
 
 ```bash
 python3.12 -m venv .venv
@@ -106,6 +108,27 @@ compares the regenerated files with the archived originals:
 python3 reviewer_reproduce_analysis.py derived/reanalysis_v2_6_2
 ```
 
+### 5. Rebuild the manuscript analysis and figures
+
+This pipeline reads the frozen results in place and writes only below
+`derived/manuscript_analysis_v2_6_2/`:
+
+```bash
+python3 manuscript_analysis_v2_6_2/scripts/validate_sources_and_protocol.py
+python3 manuscript_analysis_v2_6_2/scripts/analyze_a_to_d.py
+python3 manuscript_analysis_v2_6_2/scripts/analyze_e_f.py
+python3 manuscript_analysis_v2_6_2/scripts/analyze_g_h.py
+python3 manuscript_analysis_v2_6_2/scripts/audit_derived_outputs.py
+python3 manuscript_analysis_v2_6_2/scripts/build_publication_outputs.py
+python3 manuscript_analysis_v2_6_2/scripts/verify_reference_outputs.py
+```
+
+The final check compares regenerated scientific content with the curated
+Tables R1-R6, panel-data CSVs, and Figures 4-8 while ignoring generation times
+and PDF container metadata. See
+[`manuscript_analysis_v2_6_2/README.md`](manuscript_analysis_v2_6_2/README.md)
+for the scientific scope and interpretation limits.
+
 ## Full production rerun
 
 Reviewers do not need to repeat the complete calculation. The completed
@@ -126,6 +149,8 @@ the historical log.
 ## Contents
 
 - `single_realization_results_v2_6_2/`: all frozen scientific outputs.
+- `manuscript_analysis_v2_6_2/`: locked read-only analysis scripts, protocol,
+  curated tables, panel data, figures, captions, and compact provenance.
 - `RESULTS_CONTENTS_v2_6_2.sha256`: hashes for all 3,619 result files.
 - `RELEASE_CONTENTS_v2_6_2.sha256`: hashes for the 31 frozen source, release,
   validation, and execution files.

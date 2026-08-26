@@ -1,0 +1,83 @@
+{
+  "analysis_version": "cpg-v2.6.2-manuscript-e-f-1.0",
+  "generated_utc": "2026-08-26T18:12:32+00:00",
+  "script_sha256": "d0bde0ec0552c341e5ead1b4598d63352fb999a1674433bd60a7c7c3d3287ac0",
+  "source_sha256": {
+    "analysis_task_index.csv": "d61f30873a1a5c0c3150c58cd97ca0842e2340be281697a7ae447055d94fc095",
+    "metrics.csv": "aac42c01231cd8b3057ceaba806ca8bd68e207c94c8b500ec302acfe425e72ab",
+    "unique_simulation_metrics.csv": "67889dd949276991ea79bca10a67268b7a430a393687b42bfff4a36b19b84ee4",
+    "long_epoch_metrics.csv": "8edeceaf70f143ae5d3c9b6efbfb29f743af76b987a3163f16ae0d6420b83755",
+    "experiment_plan_single_realization_v2_6_2.json": "62a3bc1d5cf94e3369c5f3a32f30486960f96b8606580599eb9fb45924889875",
+    "single_realization_contrasts_v2_6_2.csv": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4"
+  },
+  "protocol_spec_sha256": "ac36628fef7684bc08672b4c0678d32822a62f1b86b86ed9e5e19afa29f97220",
+  "output_row_count": 1,
+  "independent_stochastic_realization_count": 1,
+  "inferential_scope": "conditional_on_one_frozen_realization_no_population_inference",
+  "qc_pass": true,
+  "matrix_qc": {
+    "analysis_task_count": 11686,
+    "unique_simulation_count": 3610,
+    "stage_task_counts": {
+      "A": 27,
+      "B": 270,
+      "C": 162,
+      "D": 54,
+      "E": 270,
+      "F": 10800,
+      "G": 31,
+      "H": 72
+    },
+    "stage_unique_simulation_counts": {
+      "A": 27,
+      "B": 270,
+      "C": 162,
+      "D": 54,
+      "E": 270,
+      "F": 3267,
+      "G": 31,
+      "H": 72
+    }
+  },
+  "metric_qc": {
+    "scientific_invalid_count": 0,
+    "technical_invalid_count": 0,
+    "matched_plus_missed_equals_anchor_checks": 23372
+  },
+  "checks": {
+    "source_hashes_match_locked_spec": true,
+    "global_matrix_contract_pass": true,
+    "metrics_validity_contract_pass": true,
+    "stage_e_task_count": 270,
+    "stage_e_exact_context_matched_pairs": 270,
+    "stage_e_route_by_context_expected": 270,
+    "stage_f_task_count": 10800,
+    "stage_f_unique_simulation_count": 3267,
+    "stage_f_factorial_cells": 2700,
+    "stage_f_class_route_context_key_count": 2700,
+    "stage_f_four_arm_complete_cell_count": 2700,
+    "stage_f_diagonal_context_cells": 270,
+    "stage_f_off_diagonal_context_cells": 2430,
+    "stage_f_expected_diagonal_context_cells": 270,
+    "stage_f_expected_off_diagonal_context_cells": 2430,
+    "forbidden_inference_header_findings": [],
+    "simulation_id_treated_as_replication": false
+  },
+  "derived_csv_row_counts": {
+    "e_f_e_phase_recovery_atomic.csv": 1620,
+    "e_f_e_phase_recovery_summary.csv": 180,
+    "e_f_e_propagation_atomic.csv": 1890,
+    "e_f_e_propagation_summary.csv": 210,
+    "e_f_e_terminal_state_atomic.csv": 810,
+    "e_f_e_terminal_state_summary.csv": 90,
+    "e_f_e_failure_transitions.csv": 120,
+    "e_f_f_phase_recovery_atomic.csv": 16200,
+    "e_f_f_phase_recovery_summary.csv": 1800,
+    "e_f_f_propagation_atomic.csv": 18900,
+    "e_f_f_propagation_summary.csv": 2100,
+    "e_f_f_terminal_state_atomic.csv": 8100,
+    "e_f_f_terminal_state_summary.csv": 900,
+    "e_f_f_diagonal_off_diagonal_summary.csv": 96,
+    "e_f_f_failure_patterns.csv": 302
+  }
+}
