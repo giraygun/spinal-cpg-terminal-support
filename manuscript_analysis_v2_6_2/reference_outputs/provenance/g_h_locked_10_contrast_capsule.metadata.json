@@ -1,0 +1,13 @@
+{
+  "schema": "cpg-g-h-locked-capsule-metadata-1.0",
+  "generated_at_utc": "2026-08-26T18:12:40.419055+00:00",
+  "script_version": "g-h-analysis-1.0.0",
+  "script_sha256": "9c306d57a391d92a493f0b9590b5ec0d2af7679ab1dc1116abab6b6253017763",
+  "protocol_spec_sha256": "ac36628fef7684bc08672b4c0678d32822a62f1b86b86ed9e5e19afa29f97220",
+  "source_single_realization_contrasts_v2_6_2_sha256": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4",
+  "output_sha256": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4",
+  "output_row_count": 10,
+  "byte_identical_to_frozen_source": true,
+  "analysis_role": "separate locked preregistration capsule; not a global pass/fail rule",
+  "independent_stochastic_realization_count": 1
+}

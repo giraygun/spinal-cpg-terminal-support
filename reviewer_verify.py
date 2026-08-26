@@ -250,6 +250,9 @@ def verify_environment() -> None:
         "numpy": "2.3.5",
         "scipy": "1.17.0",
         "matplotlib": "3.10.8",
+        "pandas": "2.2.3",
+        "pillow": "12.3.0",
+        "pypdf": "6.10.0",
     }
     for package, expected_version in expected.items():
         try:

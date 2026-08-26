@@ -1,0 +1,364 @@
+{
+  "schema": "cpg-master-analysis-qc-1.0",
+  "generated_at_utc": "2026-08-26T18:12:42.600919+00:00",
+  "script": "manuscript_analysis_v2_6_2/scripts/audit_derived_outputs.py",
+  "script_sha256": "3ea9d61e673230e07ca7a4236ca7a26cbd8a8e7eab8933d0ccfa69f610281a15",
+  "locked_protocol_sha256": "cf2fef52687428f0eab74fc123ceb2a36cb6d0fc70d5442d221c955a4753ae2f",
+  "protocol_spec_sha256": "ac36628fef7684bc08672b4c0678d32822a62f1b86b86ed9e5e19afa29f97220",
+  "analysis_script_sha256": {
+    "validate_sources_and_protocol.py": "93231bda0bf50b70bc3204f86c7da509e6a864b93ed6c836d7a68ebd657a6f82",
+    "analyze_a_to_d.py": "a0b23907336269b78a7cfd2eb7057232c7afcf87129f8a4c9d0f5e93faa0a5ef",
+    "analyze_e_f.py": "d0bde0ec0552c341e5ead1b4598d63352fb999a1674433bd60a7c7c3d3287ac0",
+    "analyze_g_h.py": "9c306d57a391d92a493f0b9590b5ec0d2af7679ab1dc1116abab6b6253017763"
+  },
+  "counts": {
+    "analysis_tasks": 11686,
+    "unique_simulations": 3610,
+    "long_epoch_rows": 744,
+    "F_factorial_cells": 2700,
+    "H_conditions": 72,
+    "derived_csv_files": 34,
+    "derived_csv_rows_total": 73285,
+    "technical_invalid_unique_simulations": 0,
+    "scientific_invalid_unique_simulations": 0
+  },
+  "audited_csv": {
+    "a_to_d_a_intact_no_pulse_grid.csv": {
+      "rows": 9,
+      "fields": 41,
+      "sha256": "c75c95dbee6f60b5c0b582ad715c7e1c34ea2fc0e42d139b04b5d313a5b7e237",
+      "bytes": 9155
+    },
+    "a_to_d_a_pulse_vs_matched_sham.csv": {
+      "rows": 18,
+      "fields": 58,
+      "sha256": "3b9616ba814322c5205cbd63b56cebac82ccb30666e44250cb0912072b3499d7",
+      "bytes": 21899
+    },
+    "a_to_d_b_single_continuous_effects.csv": {
+      "rows": 4320,
+      "fields": 39,
+      "sha256": "d68dacb90e73d8a3c6c028e6bdf6437e4f58bfbe3af8f99830471410858c2b0e",
+      "bytes": 4359381
+    },
+    "a_to_d_b_single_states.csv": {
+      "rows": 270,
+      "fields": 40,
+      "sha256": "0891fcfe8c6fa854e82a2ad2b7323a1b503ae9b633e35a5759618a99c05f41d9",
+      "bytes": 260262
+    },
+    "a_to_d_c_pair_continuous_effects.csv": {
+      "rows": 2592,
+      "fields": 59,
+      "sha256": "591829a3404def3c5133d0576c083daa5fd40980fb4767eb2f479eef38962e45",
+      "bytes": 3372497
+    },
+    "a_to_d_c_pair_states.csv": {
+      "rows": 162,
+      "fields": 62,
+      "sha256": "879385d9a6ab0b963bf1e539e448760507280c12c94af25995f0f55aa31f2434",
+      "bytes": 213983
+    },
+    "a_to_d_d_conditions.csv": {
+      "rows": 54,
+      "fields": 29,
+      "sha256": "3cbfe91823b8881a418fd1601b173c902a8fd01e0274bc3a0462fb186fde7762",
+      "bytes": 42773
+    },
+    "a_to_d_d_recruitment_rates.csv": {
+      "rows": 540,
+      "fields": 24,
+      "sha256": "ec5e303a9d229862ae1348aca4d8b16172a7accf2b1cb71e9074f9ec78b74123",
+      "bytes": 414586
+    },
+    "a_to_d_d_speed_effect_differences.csv": {
+      "rows": 240,
+      "fields": 41,
+      "sha256": "0e7402263d406a3a201cb9ed5858d610fd74802b2a0bce7e71dce1ac67322f04",
+      "bytes": 248291
+    },
+    "a_to_d_descriptive_summaries.csv": {
+      "rows": 1304,
+      "fields": 33,
+      "sha256": "f38c8ab4c71aadf4b000601843a4cf81653e91764840988411b59f3a429c6f46",
+      "bytes": 1117648
+    },
+    "a_to_d_stage_inventory.csv": {
+      "rows": 4,
+      "fields": 23,
+      "sha256": "cd2ed4ee097c0394313c3e2d79e37515c337fef6d17cbe945485020730855c0a",
+      "bytes": 3168
+    },
+    "e_f_e_failure_transitions.csv": {
+      "rows": 120,
+      "fields": 15,
+      "sha256": "dd41c7a04290e5f5333922d62a49a72d66bde2dd34154371c2b3c502ade2213f",
+      "bytes": 51163
+    },
+    "e_f_e_phase_recovery_atomic.csv": {
+      "rows": 1620,
+      "fields": 74,
+      "sha256": "837e13f3ace3c8dc8a8338d79fc70b368839978b12074dab10669ebebd115a7c",
+      "bytes": 1558221
+    },
+    "e_f_e_phase_recovery_summary.csv": {
+      "rows": 180,
+      "fields": 26,
+      "sha256": "d2a1c9db3bb566674c881e1eac711826ca2b76c780eb050069d249100ef87fb5",
+      "bytes": 95879
+    },
+    "e_f_e_propagation_atomic.csv": {
+      "rows": 1890,
+      "fields": 74,
+      "sha256": "f7843fc8b5f02bac4fec64cb17f80e705e12a436208a6ba0fcdd3a8a88c5a748",
+      "bytes": 1865124
+    },
+    "e_f_e_propagation_summary.csv": {
+      "rows": 210,
+      "fields": 26,
+      "sha256": "2c7ecbe718af2a3686fce3cabc1c71abc9e9addabc3eeb87400f5dad4e1147e5",
+      "bytes": 118563
+    },
+    "e_f_e_terminal_state_atomic.csv": {
+      "rows": 810,
+      "fields": 74,
+      "sha256": "b7ba81783568d53e358a6f03cab70b0bca7481fb71be5532de44b14da8c6d9b3",
+      "bytes": 825263
+    },
+    "e_f_e_terminal_state_summary.csv": {
+      "rows": 90,
+      "fields": 26,
+      "sha256": "26fc803528727e0ce6aa811c67e78fef4f79298b6b9d11012b873a10d753897a",
+      "bytes": 54137
+    },
+    "e_f_f_diagonal_off_diagonal_summary.csv": {
+      "rows": 96,
+      "fields": 26,
+      "sha256": "b847b922d823e383abfa8a6082e1887cc79ece9a026f5f4f87b72703b4c1e089",
+      "bytes": 55244
+    },
+    "e_f_f_failure_patterns.csv": {
+      "rows": 302,
+      "fields": 18,
+      "sha256": "5c6dae4d5381e397098d5b11f01bfb15aed893d4429e6a4efc1a0b427742be96",
+      "bytes": 157966
+    },
+    "e_f_f_phase_recovery_atomic.csv": {
+      "rows": 16200,
+      "fields": 127,
+      "sha256": "888d167645c803dd1d5927a31072e0e66b1e9b5a1a2ad97a43e6403a1fc3ff71",
+      "bytes": 23382990
+    },
+    "e_f_f_phase_recovery_summary.csv": {
+      "rows": 1800,
+      "fields": 28,
+      "sha256": "e04b24569b172a88e2f55c9c02fd8221cb27ab284f5ad5acafcabcbba40dc871",
+      "bytes": 980814
+    },
+    "e_f_f_propagation_atomic.csv": {
+      "rows": 18900,
+      "fields": 127,
+      "sha256": "46b08523690022ac5093e871fa708e882b886a9831e6eff06b83784a2db81927",
+      "bytes": 27746048
+    },
+    "e_f_f_propagation_summary.csv": {
+      "rows": 2100,
+      "fields": 28,
+      "sha256": "ee90b9c9fca8c30de9388317e033d5ab0ca88a8856cb2b8b41d8259837a7d683",
+      "bytes": 1190524
+    },
+    "e_f_f_terminal_state_atomic.csv": {
+      "rows": 8100,
+      "fields": 127,
+      "sha256": "9d6d57811af64e5897ebf9eafba937d20fc5521717366f6cf2e398e1a01df08a",
+      "bytes": 12221536
+    },
+    "e_f_f_terminal_state_summary.csv": {
+      "rows": 900,
+      "fields": 28,
+      "sha256": "faee9522e31680754f493a069f62c21e5e6427108ae7cad03f639e0d39b46d92",
+      "bytes": 545927
+    },
+    "g_h_g_epoch_atomic.csv": {
+      "rows": 744,
+      "fields": 88,
+      "sha256": "4d14e7a3768a4b74aff8c61704763ffbbd112cfc5362f3d0d53a50876fcbe8e5",
+      "bytes": 1012653
+    },
+    "g_h_g_route_did.csv": {
+      "rows": 600,
+      "fields": 60,
+      "sha256": "002f48ee54c32e28f5aa390ed2d0ef3862f8a9ac0850219a08ba25d2c787e9ed",
+      "bytes": 684004
+    },
+    "g_h_g_window_arms.csv": {
+      "rows": 124,
+      "fields": 92,
+      "sha256": "20999c8c9e396f2caaf36bbd70d6b71e9df721274cdda0e4a1039680f9ca550a",
+      "bytes": 188566
+    },
+    "g_h_h_conditions.csv": {
+      "rows": 72,
+      "fields": 104,
+      "sha256": "dc001185505e87673d6081c856d5a929bac6acbcd078a5412e79263f921919ae",
+      "bytes": 117980
+    },
+    "g_h_h_fast_contrasts.csv": {
+      "rows": 3024,
+      "fields": 47,
+      "sha256": "ad24e22dd30a167a0df74156f4108acf3042d8713404044e3a1b2f888d858144",
+      "bytes": 2485642
+    },
+    "g_h_h_mt_by_fast_did.csv": {
+      "rows": 2520,
+      "fields": 68,
+      "sha256": "f3023e8e65a751afac396aca76955e125c26c847683555018e040185c3f4721f",
+      "bytes": 3001846
+    },
+    "g_h_h_mt_contrasts.csv": {
+      "rows": 3360,
+      "fields": 47,
+      "sha256": "bc636c56eb3c6340a270eefd4324e75ed07ae995c3b99afebb90f0a81f031edc",
+      "bytes": 2805270
+    },
+    "g_h_locked_10_contrast_capsule.csv": {
+      "rows": 10,
+      "fields": 9,
+      "sha256": "b732a60e4ccf715f62c3705d9602b177292bb9fe1a7a53019a18354ffdfabec4",
+      "bytes": 1739
+    }
+  },
+  "forbidden_inference_field_hits": {},
+  "composite_recovery_hits": [],
+  "checks": {
+    "source_protocol_qc_pass": true,
+    "a_to_d_qc_pass": true,
+    "e_f_qc_pass": true,
+    "g_h_qc_pass": true,
+    "a_to_d_script_hash_current": true,
+    "e_f_script_hash_current": true,
+    "g_h_script_hash_current": true,
+    "a_to_d_locked_protocol_hash_current": true,
+    "source_protocol_spec_hash_current": true,
+    "a_to_d_protocol_spec_hash_current": true,
+    "e_f_protocol_spec_hash_current": true,
+    "g_h_protocol_spec_hash_current": true,
+    "master_11686_tasks": true,
+    "master_3610_simulations": true,
+    "master_744_epochs": true,
+    "master_F_2700_cells": true,
+    "master_H_72_conditions": true,
+    "no_forbidden_inference_csv_fields": true,
+    "no_composite_recovery_csv_fields": true,
+    "a_to_d_output_exists::a_to_d_a_intact_no_pulse_grid.csv": true,
+    "a_to_d_row_count::a_to_d_a_intact_no_pulse_grid.csv": true,
+    "a_to_d_hash::a_to_d_a_intact_no_pulse_grid.csv": true,
+    "a_to_d_output_exists::a_to_d_a_pulse_vs_matched_sham.csv": true,
+    "a_to_d_row_count::a_to_d_a_pulse_vs_matched_sham.csv": true,
+    "a_to_d_hash::a_to_d_a_pulse_vs_matched_sham.csv": true,
+    "a_to_d_output_exists::a_to_d_b_single_continuous_effects.csv": true,
+    "a_to_d_row_count::a_to_d_b_single_continuous_effects.csv": true,
+    "a_to_d_hash::a_to_d_b_single_continuous_effects.csv": true,
+    "a_to_d_output_exists::a_to_d_b_single_states.csv": true,
+    "a_to_d_row_count::a_to_d_b_single_states.csv": true,
+    "a_to_d_hash::a_to_d_b_single_states.csv": true,
+    "a_to_d_output_exists::a_to_d_c_pair_continuous_effects.csv": true,
+    "a_to_d_row_count::a_to_d_c_pair_continuous_effects.csv": true,
+    "a_to_d_hash::a_to_d_c_pair_continuous_effects.csv": true,
+    "a_to_d_output_exists::a_to_d_c_pair_states.csv": true,
+    "a_to_d_row_count::a_to_d_c_pair_states.csv": true,
+    "a_to_d_hash::a_to_d_c_pair_states.csv": true,
+    "a_to_d_output_exists::a_to_d_d_conditions.csv": true,
+    "a_to_d_row_count::a_to_d_d_conditions.csv": true,
+    "a_to_d_hash::a_to_d_d_conditions.csv": true,
+    "a_to_d_output_exists::a_to_d_d_recruitment_rates.csv": true,
+    "a_to_d_row_count::a_to_d_d_recruitment_rates.csv": true,
+    "a_to_d_hash::a_to_d_d_recruitment_rates.csv": true,
+    "a_to_d_output_exists::a_to_d_d_speed_effect_differences.csv": true,
+    "a_to_d_row_count::a_to_d_d_speed_effect_differences.csv": true,
+    "a_to_d_hash::a_to_d_d_speed_effect_differences.csv": true,
+    "a_to_d_output_exists::a_to_d_descriptive_summaries.csv": true,
+    "a_to_d_row_count::a_to_d_descriptive_summaries.csv": true,
+    "a_to_d_hash::a_to_d_descriptive_summaries.csv": true,
+    "a_to_d_output_exists::a_to_d_stage_inventory.csv": true,
+    "a_to_d_row_count::a_to_d_stage_inventory.csv": true,
+    "a_to_d_hash::a_to_d_stage_inventory.csv": true,
+    "e_f_output_exists::e_f_e_phase_recovery_atomic.csv": true,
+    "e_f_row_count::e_f_e_phase_recovery_atomic.csv": true,
+    "e_f_hash::e_f_e_phase_recovery_atomic.csv": true,
+    "e_f_output_exists::e_f_e_phase_recovery_summary.csv": true,
+    "e_f_row_count::e_f_e_phase_recovery_summary.csv": true,
+    "e_f_hash::e_f_e_phase_recovery_summary.csv": true,
+    "e_f_output_exists::e_f_e_propagation_atomic.csv": true,
+    "e_f_row_count::e_f_e_propagation_atomic.csv": true,
+    "e_f_hash::e_f_e_propagation_atomic.csv": true,
+    "e_f_output_exists::e_f_e_propagation_summary.csv": true,
+    "e_f_row_count::e_f_e_propagation_summary.csv": true,
+    "e_f_hash::e_f_e_propagation_summary.csv": true,
+    "e_f_output_exists::e_f_e_terminal_state_atomic.csv": true,
+    "e_f_row_count::e_f_e_terminal_state_atomic.csv": true,
+    "e_f_hash::e_f_e_terminal_state_atomic.csv": true,
+    "e_f_output_exists::e_f_e_terminal_state_summary.csv": true,
+    "e_f_row_count::e_f_e_terminal_state_summary.csv": true,
+    "e_f_hash::e_f_e_terminal_state_summary.csv": true,
+    "e_f_output_exists::e_f_e_failure_transitions.csv": true,
+    "e_f_row_count::e_f_e_failure_transitions.csv": true,
+    "e_f_hash::e_f_e_failure_transitions.csv": true,
+    "e_f_output_exists::e_f_f_phase_recovery_atomic.csv": true,
+    "e_f_row_count::e_f_f_phase_recovery_atomic.csv": true,
+    "e_f_hash::e_f_f_phase_recovery_atomic.csv": true,
+    "e_f_output_exists::e_f_f_phase_recovery_summary.csv": true,
+    "e_f_row_count::e_f_f_phase_recovery_summary.csv": true,
+    "e_f_hash::e_f_f_phase_recovery_summary.csv": true,
+    "e_f_output_exists::e_f_f_propagation_atomic.csv": true,
+    "e_f_row_count::e_f_f_propagation_atomic.csv": true,
+    "e_f_hash::e_f_f_propagation_atomic.csv": true,
+    "e_f_output_exists::e_f_f_propagation_summary.csv": true,
+    "e_f_row_count::e_f_f_propagation_summary.csv": true,
+    "e_f_hash::e_f_f_propagation_summary.csv": true,
+    "e_f_output_exists::e_f_f_terminal_state_atomic.csv": true,
+    "e_f_row_count::e_f_f_terminal_state_atomic.csv": true,
+    "e_f_hash::e_f_f_terminal_state_atomic.csv": true,
+    "e_f_output_exists::e_f_f_terminal_state_summary.csv": true,
+    "e_f_row_count::e_f_f_terminal_state_summary.csv": true,
+    "e_f_hash::e_f_f_terminal_state_summary.csv": true,
+    "e_f_output_exists::e_f_f_diagonal_off_diagonal_summary.csv": true,
+    "e_f_row_count::e_f_f_diagonal_off_diagonal_summary.csv": true,
+    "e_f_hash::e_f_f_diagonal_off_diagonal_summary.csv": true,
+    "e_f_output_exists::e_f_f_failure_patterns.csv": true,
+    "e_f_row_count::e_f_f_failure_patterns.csv": true,
+    "e_f_hash::e_f_f_failure_patterns.csv": true,
+    "e_f_output_exists::e_f_qc.json": true,
+    "e_f_hash::e_f_qc.json": true,
+    "g_h_output_exists::g_h_g_epoch_atomic.csv": true,
+    "g_h_row_count::g_h_g_epoch_atomic.csv": true,
+    "g_h_hash::g_h_g_epoch_atomic.csv": true,
+    "g_h_output_exists::g_h_g_window_arms.csv": true,
+    "g_h_row_count::g_h_g_window_arms.csv": true,
+    "g_h_hash::g_h_g_window_arms.csv": true,
+    "g_h_output_exists::g_h_g_route_did.csv": true,
+    "g_h_row_count::g_h_g_route_did.csv": true,
+    "g_h_hash::g_h_g_route_did.csv": true,
+    "g_h_output_exists::g_h_h_conditions.csv": true,
+    "g_h_row_count::g_h_h_conditions.csv": true,
+    "g_h_hash::g_h_h_conditions.csv": true,
+    "g_h_output_exists::g_h_h_mt_contrasts.csv": true,
+    "g_h_row_count::g_h_h_mt_contrasts.csv": true,
+    "g_h_hash::g_h_h_mt_contrasts.csv": true,
+    "g_h_output_exists::g_h_h_fast_contrasts.csv": true,
+    "g_h_row_count::g_h_h_fast_contrasts.csv": true,
+    "g_h_hash::g_h_h_fast_contrasts.csv": true,
+    "g_h_output_exists::g_h_h_mt_by_fast_did.csv": true,
+    "g_h_row_count::g_h_h_mt_by_fast_did.csv": true,
+    "g_h_hash::g_h_h_mt_by_fast_did.csv": true,
+    "g_h_output_exists::g_h_locked_10_contrast_capsule.csv": true,
+    "g_h_row_count::g_h_locked_10_contrast_capsule.csv": true,
+    "g_h_hash::g_h_locked_10_contrast_capsule.csv": true,
+    "g_h_output_exists::g_h_locked_10_contrast_capsule.metadata.json": true,
+    "g_h_hash::g_h_locked_10_contrast_capsule.metadata.json": true,
+    "locked_capsule_byte_identical": true,
+    "no_composite_recovery_in_analysis_code": true
+  },
+  "all_checks_pass": true,
+  "inference_scope": "conditional on one frozen realization; no sampling inference"
+}

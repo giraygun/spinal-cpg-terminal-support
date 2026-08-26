@@ -37,6 +37,16 @@ jobs:
         run: >-
           python reviewer_reproduce_analysis.py
           "${RUNNER_TEMP}/reviewer_reanalysis"
+      - name: Rebuild and verify the read-only manuscript analysis
+        run: |
+          (cd manuscript_analysis_v2_6_2 && sha256sum -c MANIFEST.sha256)
+          python manuscript_analysis_v2_6_2/scripts/validate_sources_and_protocol.py
+          python manuscript_analysis_v2_6_2/scripts/analyze_a_to_d.py
+          python manuscript_analysis_v2_6_2/scripts/analyze_e_f.py
+          python manuscript_analysis_v2_6_2/scripts/analyze_g_h.py
+          python manuscript_analysis_v2_6_2/scripts/audit_derived_outputs.py
+          python manuscript_analysis_v2_6_2/scripts/build_publication_outputs.py
+          python manuscript_analysis_v2_6_2/scripts/verify_reference_outputs.py
       - name: Run one-task technical smoke test
         run: |
           python run_ah_experiments_accelerated_v2_6_1.py \
