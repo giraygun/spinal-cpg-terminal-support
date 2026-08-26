@@ -126,3 +126,110 @@ jobs:
             --target "${GITHUB_SHA}" \
             --title "v2.6.2 - Frozen single-realization spinal CPG reviewer release" \
             --notes-file "${RUNNER_TEMP}/release-notes.md"
+
+  publish-v2-6-2:
+    if: >-
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/release-v2-6-2-publication' &&
+      github.event.head_commit.message == 'release: publish v2.6.2'
+    runs-on: ubuntu-24.04
+    needs: [reviewer-checks, container-checks]
+    concurrency:
+      group: release-v2.6.2
+      cancel-in-progress: false
+    permissions:
+      contents: write
+    env:
+      RELEASE_ID: "377459522"
+      RELEASE_COMMIT: ac47546c60a78748cd9370fbdb00dc5aa01e8ba4
+      ARCHIVE_NAME: spinal-cpg-terminal-support-v2.6.2.tar.gz
+      ARCHIVE_SIZE: "14644792"
+      ARCHIVE_DIGEST: sha256:5f7b88242419dd0d6fb5a8e0157673fea06331ec7b61b70dd0da0f6615bf7b81
+      CHECKSUM_NAME: spinal-cpg-terminal-support-v2.6.2.tar.gz.sha256
+      CHECKSUM_SIZE: "108"
+      CHECKSUM_DIGEST: sha256:459f6e7bc8ef7a146e3ee9922128e4d913fb8c561d130fefd87d9cf2034ff86f
+    steps:
+      - name: Verify and publish the fixed release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          default_branch="$(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}" \
+              --jq '.default_branch'
+          )"
+          test "${default_branch}" = "main"
+          default_sha="$(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/git/ref/heads/${default_branch}" \
+              --jq '.object.sha'
+          )"
+          test "${default_sha}" = "${RELEASE_COMMIT}"
+
+          release_json="$(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}"
+          )"
+
+          jq -e \
+            --arg tag "v2.6.2" \
+            --arg target "${RELEASE_COMMIT}" \
+            '.tag_name == $tag and
+             .target_commitish == $target and
+             .prerelease == false' \
+            <<< "${release_json}" >/dev/null
+
+          verify_asset() {
+            local name="$1"
+            local size="$2"
+            local digest="$3"
+            jq -e \
+              --arg name "${name}" \
+              --argjson size "${size}" \
+              --arg digest "${digest}" \
+              '[.assets[] |
+                select(.name == $name and
+                       .size == $size and
+                       .digest == $digest and
+                       .state == "uploaded")] |
+               length == 1' \
+              <<< "${release_json}" >/dev/null
+          }
+
+          test "$(jq '.assets | length' <<< "${release_json}")" = "2"
+          verify_asset \
+            "${ARCHIVE_NAME}" "${ARCHIVE_SIZE}" "${ARCHIVE_DIGEST}"
+          verify_asset \
+            "${CHECKSUM_NAME}" "${CHECKSUM_SIZE}" "${CHECKSUM_DIGEST}"
+
+          if test "$(jq -r '.draft' <<< "${release_json}")" = "true"; then
+            gh api \
+              --method PATCH \
+              "repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}" \
+              -F draft=false \
+              -f make_latest=true \
+              > "${RUNNER_TEMP}/published-release.json"
+          fi
+
+          published_json="$(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/releases/${RELEASE_ID}"
+          )"
+          jq -e \
+            --arg tag "v2.6.2" \
+            --arg target "${RELEASE_COMMIT}" \
+            '.draft == false and
+             .prerelease == false and
+             .tag_name == $tag and
+             .target_commitish == $target and
+             .published_at != null' \
+            <<< "${published_json}" >/dev/null
+
+          tag_sha="$(
+            gh api \
+              "repos/${GITHUB_REPOSITORY}/git/ref/tags/v2.6.2" \
+              --jq '.object.sha'
+          )"
+          test "${tag_sha}" = "${RELEASE_COMMIT}"
