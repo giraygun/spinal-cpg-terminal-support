@@ -1,0 +1,1117 @@
+{
+  "scientific_results": false,
+  "validation_gate": "stress",
+  "model_file": "dual_timescale_spinal_cpg_v2_6_1_candidate.py",
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "model_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "manifest_file": "VALIDATION_SEED_MANIFEST_v2_6_1_final_candidate.json",
+  "manifest_sha256": "198080ad65c2599300cb5a6a8b055f8633b8d7be1e213423d6c9eb56cf0e14d2",
+  "calibration_file": "mediator_control_calibration_v2_6_1.json",
+  "calibration_sha256": "3ee3114b28c0294728b055416c79cb6e80918d0487a482ac33979b12a9b62f05",
+  "recruitment_calibration_file": "inhibitory_recruitment_calibration_v2_6_1.json",
+  "recruitment_calibration_sha256": "0036296af3d783511b943d276b406646574f9fc51752730a87b3bafe456ed56b",
+  "focused_test_file": "test_numerics_architecture_v2_6_1.py",
+  "focused_test_sha256": "e63ccebe279f6e69cea48b4e1812930f55fc258f3749b1950ba48bb0e7c3e937",
+  "exact_config": {
+    "dt_ms": 0.025,
+    "duration_s": 10.0,
+    "burn_in_s": 2.0,
+    "rg_neurons": 16,
+    "relay_neurons": 8,
+    "pf_neurons": 12,
+    "mn_neurons": 12,
+    "descending_rg_drive_offsets_pa": [
+      -18.0,
+      0.0,
+      22.0
+    ],
+    "leak_reversal_mv": -65.0,
+    "threshold_mv": -50.0,
+    "slope_factor_mv": 2.0,
+    "reset_mv": -58.0,
+    "spike_peak_mv": 20.0,
+    "refractory_ms": 2.0,
+    "rg_pic_positive_fraction": 0.7714285714285715,
+    "rg_m_positive_fraction": 0.8857142857142857,
+    "rg_kca_positive_fraction": 0.02857142857142857,
+    "rg_h_positive_fraction": 0.5714285714285714,
+    "rg_t_positive_fraction": 0.17142857142857143,
+    "rg_a_positive_fraction": 0.14285714285714285,
+    "rg_gap_pair_probability": 0.3333333333333333,
+    "rg_nap_conductance_ns": 4.7,
+    "sodium_reversal_mv": 55.0,
+    "nap_activation_half_mv": -47.0,
+    "nap_activation_slope_mv": 4.5,
+    "nap_inactivation_half_mv": -48.0,
+    "nap_inactivation_slope_mv": 5.0,
+    "nap_inactivation_tau_ms": 560.0,
+    "rg_ltype_ca_pic_conductance_ns": 0.2,
+    "rg_ltype_ca_pic_activation_half_mv": -45.0,
+    "rg_ltype_ca_pic_activation_slope_mv": 5.5,
+    "rg_ltype_ca_pic_activation_tau_ms": 80.0,
+    "rg_ltype_ca_reversal_mv": 120.0,
+    "rg_h_conductance_ns": 0.2,
+    "rg_h_reversal_mv": -35.0,
+    "rg_h_half_mv": -72.0,
+    "rg_h_slope_mv": 6.0,
+    "rg_h_tau_ms": 180.0,
+    "rg_t_conductance_ns": 0.15,
+    "rg_t_reversal_mv": 120.0,
+    "rg_t_activation_half_mv": -58.0,
+    "rg_t_activation_slope_mv": 6.0,
+    "rg_t_inactivation_half_mv": -78.0,
+    "rg_t_inactivation_slope_mv": 5.0,
+    "rg_t_inactivation_tau_ms": 45.0,
+    "rg_a_conductance_ns": 0.2,
+    "rg_a_activation_half_mv": -30.0,
+    "rg_a_activation_slope_mv": 8.0,
+    "rg_a_inactivation_half_mv": -60.0,
+    "rg_a_inactivation_slope_mv": 6.0,
+    "rg_a_inactivation_tau_ms": 20.0,
+    "rg_gap_conductance_ns": 0.08,
+    "rg_m_conductance_ns": 25.0,
+    "m_activation_half_mv": -42.0,
+    "m_activation_slope_mv": 7.0,
+    "m_activation_tau_ms": 90.0,
+    "rg_m_conductance_scale": 0.65,
+    "kca_conductance_ns": 4.0,
+    "potassium_reversal_mv": -85.0,
+    "calcium_decay_ms": 150.0,
+    "calcium_spike_increment": 0.18,
+    "calcium_half_activation": 0.32,
+    "calcium_hill_coefficient": 4.0,
+    "static_kca_activation_reference": 0.0003223102848596752,
+    "pf_slow_integration_conductance_ns": 0.1,
+    "pf_slow_integration_half_pa": 45.0,
+    "pf_slow_integration_rise_ms": 18.0,
+    "pf_slow_integration_decay_ms": 90.0,
+    "excitatory_reversal_mv": 0.0,
+    "v2a_variant_fractions": [
+      0.6776859504132231,
+      0.2396694214876033,
+      0.08264462809917356
+    ],
+    "v2a_delayed_onset_conductance_ns": 2.0,
+    "v2a_delayed_activation_half_mv": -52.0,
+    "v2a_delayed_activation_slope_mv": 6.0,
+    "v2a_delayed_relief_tau_ms": 55.0,
+    "v2a_phasic_adaptation_multiplier": 2.4,
+    "v2a_gap_conductance_ns": 0.08,
+    "v2a_tonic_gap_pair_probability": 0.2765957446808511,
+    "v2a_phasic_gap_pair_probability": 0.42857142857142855,
+    "v2a_h_positive_fractions": [
+      0.6219512195121951,
+      0.896551724137931,
+      1.0
+    ],
+    "v2a_h_conductance_ns": 0.2,
+    "v2a_h_reversal_mv": -35.0,
+    "v2a_h_half_mv": -72.0,
+    "v2a_h_slope_mv": 6.0,
+    "v2a_h_tau_ms": 180.0,
+    "v3_dorsal_fraction": 0.5,
+    "v3_ventral_h_conductance_ns": 0.175,
+    "v3_dorsal_h_conductance_multiplier": 2.0,
+    "v3_h_reversal_mv": -35.0,
+    "v3_h_half_mv": -72.0,
+    "v3_h_slope_mv": 6.0,
+    "v3_h_tau_ms": 180.0,
+    "v3_t_conductance_ns": 0.2,
+    "v3_t_reversal_mv": 120.0,
+    "v3_t_activation_half_mv": -58.0,
+    "v3_t_activation_slope_mv": 6.0,
+    "v3_t_inactivation_half_mv": -78.0,
+    "v3_t_inactivation_slope_mv": 5.0,
+    "v3_t_inactivation_tau_ms": 45.0,
+    "v3_dorsal_adaptation_multiplier": 2.0,
+    "renshaw_nachr_decay_ms": 12.0,
+    "renshaw_glutamate_decay_ms": 8.0,
+    "renshaw_h_conductance_ns": 0.45,
+    "renshaw_h_reversal_mv": -35.0,
+    "renshaw_h_half_mv": -72.0,
+    "renshaw_h_slope_mv": 6.0,
+    "renshaw_h_tau_ms": 140.0,
+    "renshaw_sk_conductance_ns": 0.55,
+    "renshaw_calcium_decay_ms": 120.0,
+    "renshaw_calcium_spike_increment": 0.18,
+    "renshaw_calcium_half_activation": 0.28,
+    "mn_dendrite_capacitance_pf": 120.0,
+    "mn_dendrite_leak_ns": 5.0,
+    "mn_soma_dendrite_coupling_ns": 4.0,
+    "mn_dendritic_synaptic_fraction": 0.5,
+    "mn_nap_pic_conductance_ns": 0.07,
+    "mn_nap_pic_activation_half_mv": -48.0,
+    "mn_nap_pic_activation_slope_mv": 5.0,
+    "mn_nap_pic_inactivation_half_mv": -30.0,
+    "mn_nap_pic_inactivation_slope_mv": 7.0,
+    "mn_nap_pic_inactivation_tau_ms": 250.0,
+    "mn_ltype_ca_pic_conductance_ns": 0.06,
+    "mn_ltype_ca_pic_activation_half_mv": -45.0,
+    "mn_ltype_ca_pic_activation_slope_mv": 5.5,
+    "mn_ltype_ca_pic_activation_tau_ms": 80.0,
+    "mn_ltype_ca_reversal_mv": 120.0,
+    "mn_ahp_conductance_ns": 0.45,
+    "mn_calcium_decay_ms": 190.0,
+    "mn_calcium_spike_increment": 0.14,
+    "mn_calcium_half_activation": 0.3,
+    "drive_heterogeneity_fraction": 0.06,
+    "noise_tau_ms": 5.0,
+    "independent_noise_sigma_pa": 6.0,
+    "population_common_noise_sigma_pa": 10.0,
+    "noise_burst_multiplier": 2.0,
+    "perturbation_start_s": 5.0,
+    "perturbation_end_s": 5.75,
+    "phase_kick_current_pa": 260.0,
+    "phase_kick_duration_ms": 80.0,
+    "excitatory_pulse_current_pa": 260.0,
+    "inhibitory_pulse_current_pa": -320.0,
+    "pulse_duration_ms": 80.0,
+    "pulse_arm_after_s": 4.0,
+    "excitatory_pulse_cycle_fraction": 0.2,
+    "inhibitory_pulse_cycle_fraction": 0.2,
+    "pf_deletion_current_pa": -900.0,
+    "excitatory_synapse_decay_ms": 18.0,
+    "inhibitory_synapse_decay_ms": 24.0,
+    "inhibitory_reversal_mv": -75.0,
+    "synaptic_reference_voltage_mv": -60.0,
+    "rg_recurrent_excitation_pa": 210.0,
+    "rg_to_v1_pa": 600.0,
+    "v1_to_antagonist_rg_pa": 1500.0,
+    "rg_to_v2a_pa": 300.0,
+    "rg_to_v0d_pa": 500.0,
+    "v2a_to_v0v_pa": 300.0,
+    "rg_to_v3_pa": 250.0,
+    "v0d_cross_inhibition_pa": 900.0,
+    "v0v_to_cross_v1_pa": 420.0,
+    "v3_to_contralateral_mn_pa": 5.0,
+    "v3_vlat_fraction_of_ventral": 0.5,
+    "v3_vlat_to_ipsilateral_mn_pa": 5.0,
+    "mn_to_v3_vlat_glutamate_pa": 5.0,
+    "rg_to_pf_pa": 450.0,
+    "pf_recurrent_excitation_pa": 35.0,
+    "v1_to_antagonist_pf_pa": 690.0,
+    "rg_to_v2b_pa": 600.0,
+    "v2b_to_antagonist_rg_pa": 1500.0,
+    "v2b_to_antagonist_pf_pa": 690.0,
+    "pf_to_mn_pa": 1200.0,
+    "v1_to_antagonist_mn_pa": 780.0,
+    "v2b_to_antagonist_mn_pa": 780.0,
+    "v2b_flexor_target_relative_gain": 0.5,
+    "mn_to_v1ren_nachr_pa": 300.0,
+    "mn_to_v1ren_glutamate_pa": 300.0,
+    "v1ren_to_mn_pa": 300.0,
+    "v1ren_to_v1ia_pa": 90.0,
+    "v2a_to_pf_pa": 85.0,
+    "v2a_to_mn_pa": 95.0,
+    "synaptic_heterogeneity_fraction": 0.05,
+    "recurrent_connection_probability": 0.5,
+    "local_connection_probability": 0.5,
+    "commissural_connection_probability": 0.5,
+    "recurrent_delay_bins_ms": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "local_delay_bins_ms": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "commissural_delay_bins_ms": [
+      2.0,
+      4.0,
+      6.0
+    ],
+    "mt_activity_tau_ms": 140.0,
+    "mt_activity_spike_increment": 0.18,
+    "mt_track_decay_ms": 2200.0,
+    "mt_nucleation_per_ms": 0.00055,
+    "mt_track_max": 1.0,
+    "mt_initial_track_fraction": 0.08,
+    "mt_static_route_supports": [
+      0.06711466909562264,
+      0.09832882287533674,
+      0.10390085493050612,
+      0.04564195094109941,
+      0.0475336012687683,
+      0.054125466877117,
+      0.031234564085884854,
+      0.09431691160189962,
+      0.12469218153508083,
+      0.06494781345848805
+    ],
+    "mt_impaired_nucleation_scale": 0.12,
+    "mt_impaired_lifetime_scale": 0.33,
+    "vesicle_fast_recovery_ms": 95.0,
+    "vesicle_slow_recovery_ms": 720.0,
+    "slow_replenishment_resource_recovery_ms": 1800.0,
+    "mt_slow_replenishment_gain": 6.0,
+    "vesicle_depletion_fraction": 0.055,
+    "long_rrp_challenge_floor": 0.2,
+    "long_replenishment_resource_challenge_floor": 0.55,
+    "challenge_route_fraction": 1.0,
+    "nmj_release_delay_ms": 0.5,
+    "nmj_release_probability": 0.55,
+    "nmj_vesicle_recovery_ms": 420.0,
+    "nmj_ach_decay_ms": 2.2,
+    "nmj_ach_release_gain": 3.0,
+    "muscle_fiber_rest_mv": -85.0,
+    "nmj_endplate_gain_mv": 78.0,
+    "nmj_endplate_tau_ms": 3.0,
+    "nmj_nachr_half_ach": 0.06,
+    "nmj_nachr_hill": 1.5,
+    "muscle_fiber_threshold_mv": -72.0,
+    "muscle_fiber_slope_mv": 2.5,
+    "muscle_calcium_tau_ms": 32.0,
+    "muscle_effective_sr_release_per_ms": 0.8,
+    "muscle_calcium_half": 0.2,
+    "muscle_calcium_hill": 3.5,
+    "load_unilateral_resistance_multiplier": 1.35,
+    "load_bilateral_high_resistance_multiplier": 1.45,
+    "extensor_force_scale_prior": 1.2,
+    "muscle_activation_tau_ms": 45.0,
+    "joint_inertia": 1.0,
+    "joint_damping": 3.2,
+    "joint_stiffness": 5.5,
+    "muscle_torque_gain": 4.0,
+    "muscle_length_scale": 0.18,
+    "ia_tonic": 0.2,
+    "ia_length_gain": 2.4,
+    "ia_velocity_gain": 0.18,
+    "ib_tonic": 0.12,
+    "ib_force_gain": 0.75,
+    "ia_to_pf_pa": 18.0,
+    "ia_to_mn_pa": 42.0,
+    "ia_to_v1ia_pa": 46.0,
+    "ib_effective_spinal_to_pf_pa": 24.0,
+    "ib_effective_spinal_to_mn_pa": 34.0,
+    "ib_effective_extensor_context_gain": 1.25,
+    "sensory_resource_recovery_ms": 300.0,
+    "sensory_resource_depletion_per_s": 0.035,
+    "long_epoch_duration_s": 2.0,
+    "long_n_epochs": 24,
+    "long_baseline_end_epoch": 6,
+    "long_demand_start_epoch": 7,
+    "long_challenge_epoch": 13,
+    "long_demand_end_epoch": 18,
+    "rate_tau_ms": 20.0,
+    "burst_on_threshold_hz": 16.0,
+    "burst_off_threshold_hz": 7.0,
+    "pf_burst_on_threshold_hz": 14.0,
+    "pf_burst_off_threshold_hz": 6.0,
+    "mn_burst_on_threshold_hz": 10.0,
+    "mn_burst_off_threshold_hz": 4.0,
+    "minimum_interburst_s": 0.22,
+    "rg_pf_match_window_s": 0.25,
+    "rg_mn_match_pre_window_s": 0.0,
+    "rg_mn_match_post_window_s": 0.25,
+    "phase_slip_threshold_deg": 45.0,
+    "recovery_consecutive_cycles": 3,
+    "recovery_frequency_tolerance_fraction": 0.25
+  },
+  "state_bounds": {
+    "rate_hz": [
+      0.0,
+      600.0,
+      "nonnegative refractory-limited population rate"
+    ],
+    "mn_hz": [
+      0.0,
+      600.0,
+      "nonnegative refractory-limited motor rate"
+    ],
+    "mt_population": [
+      0.0,
+      "mt_track_max",
+      "bounded transport-support state"
+    ],
+    "mt_side": [
+      0.0,
+      "mt_track_max",
+      "bounded transport-support state"
+    ],
+    "mt_route_support": [
+      0.0,
+      "mt_track_max",
+      "bounded transport-support state"
+    ],
+    "kca_activation_side": [
+      0.0,
+      1.0,
+      "activation fraction"
+    ],
+    "rrp_route_mean": [
+      0.0,
+      1.0,
+      "vesicle fraction"
+    ],
+    "replenishment_resource_route_mean": [
+      0.0,
+      1.0,
+      "normalized phenomenological resource"
+    ],
+    "ia_signal": [
+      0.0,
+      2.5,
+      "afferent signal clipping range"
+    ],
+    "ib_signal": [
+      0.0,
+      2.5,
+      "afferent signal clipping range"
+    ],
+    "ia_transmission": [
+      0.0,
+      2.5,
+      "resource-weighted afferent signal"
+    ],
+    "ib_transmission": [
+      0.0,
+      2.5,
+      "resource-weighted afferent signal"
+    ],
+    "nmj_vesicle_available": [
+      0.0,
+      1.0,
+      "NMJ vesicle fraction"
+    ],
+    "nmj_ach_gate": [
+      0.0,
+      1.0,
+      "NMJ transmitter gate"
+    ],
+    "nmj_nachr_open": [
+      0.0,
+      1.0,
+      "NMJ receptor open fraction"
+    ],
+    "muscle_fiber_excitation": [
+      0.0,
+      1.0,
+      "fiber excitation fraction"
+    ],
+    "muscle_calcium": [
+      0.0,
+      1.0,
+      "normalized muscle calcium"
+    ],
+    "muscle_activation": [
+      0.0,
+      1.0,
+      "muscle activation fraction"
+    ],
+    "muscle_force": [
+      0.0,
+      2.0,
+      "normalized force with extensor bias"
+    ],
+    "joint_state": [
+      -10.0,
+      10.0,
+      "broad anti-divergence plant envelope"
+    ],
+    "edge_mt_track_final": [
+      0.0,
+      "mt_track_max",
+      "bounded local support state"
+    ],
+    "edge_rrp_final": [
+      0.0,
+      1.0,
+      "vesicle fraction"
+    ],
+    "edge_slow_replenishment_resource_final": [
+      0.0,
+      1.0,
+      "normalized phenomenological resource"
+    ],
+    "sensory_resource_final": [
+      0.0,
+      1.0,
+      "sensory resource fraction"
+    ],
+    "pf_slow_gate_final": [
+      0.0,
+      1.0,
+      "premotor integration gate"
+    ],
+    "renshaw_h_gate_final": [
+      0.0,
+      1.0,
+      "Renshaw Ih gate"
+    ],
+    "v3_t_inactivation_final": [
+      0.0,
+      1.0,
+      "V3 rebound inactivation gate"
+    ],
+    "membrane_voltage_final_mv": [
+      -200.0,
+      25.0,
+      "voltage safety envelope"
+    ],
+    "mn_dendrite_voltage_final_mv": [
+      -200.0,
+      100.0,
+      "voltage safety envelope"
+    ],
+    "syn_exc_conductance_final_ns": [
+      0.0,
+      1000000.0,
+      "finite conductance"
+    ],
+    "syn_inh_conductance_final_ns": [
+      0.0,
+      1000000.0,
+      "finite conductance"
+    ],
+    "renshaw_nachr_conductance_final_ns": [
+      0.0,
+      1000000.0,
+      "finite conductance"
+    ],
+    "renshaw_calcium_final": [
+      0.0,
+      100.0,
+      "calcium safety envelope"
+    ],
+    "mechanism_component_mean_abs_pa": [
+      0.0,
+      1000000.0,
+      "finite mechanism current"
+    ]
+  },
+  "rows": [
+    {
+      "seed": 64693988,
+      "structural_seed": 64853988,
+      "profile": {
+        "index": 0,
+        "seed": 64693988,
+        "profile": "high_speed_bilateral_noise_burst",
+        "protocol": "noise_burst",
+        "speed_level": "high",
+        "load_context": "bilateral_high",
+        "pulse_direction": "none"
+      },
+      "elapsed_s": 397.3320679679964,
+      "state_audit": {
+        "technical_quality": {
+          "technical_valid": 1,
+          "technical_exclusion_reason": "none"
+        },
+        "right_end_time_grid": {
+          "sample_interval_s": 0.001,
+          "sample_count_observed": 10000,
+          "sample_count_expected": 10000,
+          "max_abs_difference_from_expected_s": 1.7763568394002505e-15,
+          "checks": {
+            "shape_exact": true,
+            "finite": true,
+            "strictly_increasing": true,
+            "first_label_is_right_endpoint": true,
+            "last_label_is_duration": true,
+            "expected_grid_within_roundoff": true
+          },
+          "passes": true
+        },
+        "full_network_neuron_count": 384,
+        "expected_full_network_neuron_count": 384,
+        "full_network_valid": true,
+        "state_checks": {
+          "rate_hz": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 600.0,
+            "rationale": "nonnegative refractory-limited population rate"
+          },
+          "mn_hz": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 600.0,
+            "rationale": "nonnegative refractory-limited motor rate"
+          },
+          "mt_population": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "mt_side": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "mt_route_support": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "kca_activation_side": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "activation fraction"
+          },
+          "rrp_route_mean": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "vesicle fraction"
+          },
+          "replenishment_resource_route_mean": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized phenomenological resource"
+          },
+          "ia_signal": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "afferent signal clipping range"
+          },
+          "ib_signal": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "afferent signal clipping range"
+          },
+          "ia_transmission": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "resource-weighted afferent signal"
+          },
+          "ib_transmission": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "resource-weighted afferent signal"
+          },
+          "nmj_vesicle_available": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ vesicle fraction"
+          },
+          "nmj_ach_gate": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ transmitter gate"
+          },
+          "nmj_nachr_open": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ receptor open fraction"
+          },
+          "muscle_fiber_excitation": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "fiber excitation fraction"
+          },
+          "muscle_calcium": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized muscle calcium"
+          },
+          "muscle_activation": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "muscle activation fraction"
+          },
+          "muscle_force": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.0,
+            "rationale": "normalized force with extensor bias"
+          },
+          "joint_state": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -10.0,
+            "upper": 10.0,
+            "rationale": "broad anti-divergence plant envelope"
+          },
+          "edge_mt_track_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded local support state"
+          },
+          "edge_rrp_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "vesicle fraction"
+          },
+          "edge_slow_replenishment_resource_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized phenomenological resource"
+          },
+          "sensory_resource_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "sensory resource fraction"
+          },
+          "pf_slow_gate_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "premotor integration gate"
+          },
+          "renshaw_h_gate_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "Renshaw Ih gate"
+          },
+          "v3_t_inactivation_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "V3 rebound inactivation gate"
+          },
+          "membrane_voltage_final_mv": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -200.0,
+            "upper": 25.0,
+            "rationale": "voltage safety envelope"
+          },
+          "mn_dendrite_voltage_final_mv": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -200.0,
+            "upper": 100.0,
+            "rationale": "voltage safety envelope"
+          },
+          "syn_exc_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "syn_inh_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "renshaw_nachr_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "renshaw_calcium_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 100.0,
+            "rationale": "calcium safety envelope"
+          },
+          "mechanism_component_mean_abs_pa": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite mechanism current"
+          }
+        },
+        "violations": [],
+        "passes": true
+      },
+      "passes": true
+    },
+    {
+      "seed": 3592523367,
+      "structural_seed": 3592683367,
+      "profile": {
+        "index": 1,
+        "seed": 3592523367,
+        "profile": "high_speed_unilateral_excitatory_pulse",
+        "protocol": "pulse",
+        "speed_level": "high",
+        "load_context": "unilateral",
+        "pulse_direction": "excitatory"
+      },
+      "elapsed_s": 397.62773121200007,
+      "state_audit": {
+        "technical_quality": {
+          "technical_valid": 1,
+          "technical_exclusion_reason": "none"
+        },
+        "right_end_time_grid": {
+          "sample_interval_s": 0.001,
+          "sample_count_observed": 10000,
+          "sample_count_expected": 10000,
+          "max_abs_difference_from_expected_s": 1.7763568394002505e-15,
+          "checks": {
+            "shape_exact": true,
+            "finite": true,
+            "strictly_increasing": true,
+            "first_label_is_right_endpoint": true,
+            "last_label_is_duration": true,
+            "expected_grid_within_roundoff": true
+          },
+          "passes": true
+        },
+        "full_network_neuron_count": 384,
+        "expected_full_network_neuron_count": 384,
+        "full_network_valid": true,
+        "state_checks": {
+          "rate_hz": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 600.0,
+            "rationale": "nonnegative refractory-limited population rate"
+          },
+          "mn_hz": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 600.0,
+            "rationale": "nonnegative refractory-limited motor rate"
+          },
+          "mt_population": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "mt_side": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "mt_route_support": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded transport-support state"
+          },
+          "kca_activation_side": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "activation fraction"
+          },
+          "rrp_route_mean": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "vesicle fraction"
+          },
+          "replenishment_resource_route_mean": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized phenomenological resource"
+          },
+          "ia_signal": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "afferent signal clipping range"
+          },
+          "ib_signal": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "afferent signal clipping range"
+          },
+          "ia_transmission": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "resource-weighted afferent signal"
+          },
+          "ib_transmission": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.5,
+            "rationale": "resource-weighted afferent signal"
+          },
+          "nmj_vesicle_available": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ vesicle fraction"
+          },
+          "nmj_ach_gate": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ transmitter gate"
+          },
+          "nmj_nachr_open": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "NMJ receptor open fraction"
+          },
+          "muscle_fiber_excitation": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "fiber excitation fraction"
+          },
+          "muscle_calcium": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized muscle calcium"
+          },
+          "muscle_activation": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "muscle activation fraction"
+          },
+          "muscle_force": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 2.0,
+            "rationale": "normalized force with extensor bias"
+          },
+          "joint_state": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -10.0,
+            "upper": 10.0,
+            "rationale": "broad anti-divergence plant envelope"
+          },
+          "edge_mt_track_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "bounded local support state"
+          },
+          "edge_rrp_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "vesicle fraction"
+          },
+          "edge_slow_replenishment_resource_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "normalized phenomenological resource"
+          },
+          "sensory_resource_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "sensory resource fraction"
+          },
+          "pf_slow_gate_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "premotor integration gate"
+          },
+          "renshaw_h_gate_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "Renshaw Ih gate"
+          },
+          "v3_t_inactivation_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1.0,
+            "rationale": "V3 rebound inactivation gate"
+          },
+          "membrane_voltage_final_mv": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -200.0,
+            "upper": 25.0,
+            "rationale": "voltage safety envelope"
+          },
+          "mn_dendrite_voltage_final_mv": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": -200.0,
+            "upper": 100.0,
+            "rationale": "voltage safety envelope"
+          },
+          "syn_exc_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "syn_inh_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "renshaw_nachr_conductance_final_ns": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite conductance"
+          },
+          "renshaw_calcium_final": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 100.0,
+            "rationale": "calcium safety envelope"
+          },
+          "mechanism_component_mean_abs_pa": {
+            "present": true,
+            "finite": true,
+            "within_bounds": true,
+            "lower": 0.0,
+            "upper": 1000000.0,
+            "rationale": "finite mechanism current"
+          }
+        },
+        "violations": [],
+        "passes": true
+      },
+      "passes": true
+    }
+  ],
+  "all_checks_pass": true
+}

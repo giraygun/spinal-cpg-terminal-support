@@ -1,0 +1,116 @@
+{
+  "status": "prospectively_locked_before_any_v2.6.1_final_gate_execution",
+  "scientific_results": false,
+  "candidate_label": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate",
+  "model_file": "dual_timescale_spinal_cpg_v2_6_1_candidate.py",
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "model_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "calibration_locks": {
+    "mediator_report": "mediator_control_calibration_v2_6_1.json",
+    "mediator_report_sha256": "3ee3114b28c0294728b055416c79cb6e80918d0487a482ac33979b12a9b62f05",
+    "recruitment_report": "inhibitory_recruitment_calibration_v2_6_1.json",
+    "recruitment_report_sha256": "0036296af3d783511b943d276b406646574f9fc51752730a87b3bafe456ed56b",
+    "focused_numerical_architecture_test": "test_numerics_architecture_v2_6_1.py",
+    "focused_numerical_architecture_test_sha256": "e63ccebe279f6e69cea48b4e1812930f55fc258f3749b1950ba48bb0e7c3e937"
+  },
+  "derivation": {
+    "algorithm": "SHA-256",
+    "conversion": "first_4_digest_bytes_unsigned_big_endian",
+    "label_root": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate|core-sha256:a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+    "construct_label_template": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate|core-sha256:a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a|construct-validation|{index}",
+    "convergence_label_template": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate|core-sha256:a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a|convergence-validation|{index}",
+    "stress_label_template": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate|core-sha256:a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a|stress-validation|{index}",
+    "reproducibility_label_template": "distributed-local-terminal-mt-cpg|v2.6.1-final-candidate|core-sha256:a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a|reproducibility-validation|{index}"
+  },
+  "construct_validation": [
+    {"index": 0, "seed": 1923022448},
+    {"index": 1, "seed": 2043082311},
+    {"index": 2, "seed": 2022115425},
+    {"index": 3, "seed": 2953158924}
+  ],
+  "convergence_validation": [
+    {"index": 0, "seed": 1874606405},
+    {"index": 1, "seed": 826983235}
+  ],
+  "stress_validation": [
+    {
+      "index": 0,
+      "seed": 64693988,
+      "profile": "high_speed_bilateral_noise_burst",
+      "protocol": "noise_burst",
+      "speed_level": "high",
+      "load_context": "bilateral_high",
+      "pulse_direction": "none"
+    },
+    {
+      "index": 1,
+      "seed": 3592523367,
+      "profile": "high_speed_unilateral_excitatory_pulse",
+      "protocol": "pulse",
+      "speed_level": "high",
+      "load_context": "unilateral",
+      "pulse_direction": "excitatory"
+    }
+  ],
+  "reproducibility_validation": [
+    {"index": 0, "seed": 3347344315}
+  ],
+  "forbidden_observed_seed_ranges": [
+    [101, 104],
+    [201, 216],
+    [401, 420],
+    [601, 732]
+  ],
+  "forbidden_observed_or_previously_declared_individual_seeds": [
+    100514753,
+    118718626,
+    620665823,
+    616645637,
+    732226176,
+    937030614,
+    959231903,
+    1147391351,
+    1169967387,
+    1410768933,
+    1481227340,
+    1667000121,
+    1876694593,
+    2114476888,
+    2307718999,
+    2495081552,
+    2574519305,
+    2596543166,
+    2701139343,
+    2949311576,
+    3444179818,
+    4101810800,
+    4136071502,
+    4288070763
+  ],
+  "candidate_parameters": {
+    "production_time_step_ms": 0.025,
+    "convergence_comparator_time_step_ms": 0.0125,
+    "membrane_integrator": "local_exponential_rosenbrock_with_event_time_inversion",
+    "structural_seed_formula": "160000 + simulation_seed",
+    "topology": "fixed_indegree_homologous_mirrored_balanced_delays",
+    "connection_probabilities": {
+      "recurrent": 0.5,
+      "local": 0.5,
+      "commissural": 0.5
+    },
+    "coordination_gain_multiplier": 1.5,
+    "rg_to_pf_and_pf_to_mn_transfer_multiplier": 1.5,
+    "rg_to_v1ia_and_rg_to_v2b_recruitment_multiplier": 2.0
+  },
+  "acceptance_policy": {
+    "source_identity": "model, manifest and all calibration-lock SHA-256 values must match before every simulator call",
+    "construct": "all four seeds independently pass every predeclared construct gate, all technical bounds and all four V1Ia plus all four V2b populations exceed the 0.10 Hz operational engagement floor",
+    "convergence": "both seeds independently pass every unchanged v2.5 amended metric at 0.025 versus 0.0125 ms with noise disabled, no phase alignment and exact connectomes",
+    "stress": "both predeclared high-speed profiles pass every finite state-bound, time-grid and full-network check",
+    "reproducibility": "two repeats of the declared seed have exact trace key sets and every returned field is shape, dtype, array-value and canonical-byte exact",
+    "no_cross_seed_averaging_for_pass_fail": true,
+    "no_threshold_change_after_execution": true,
+    "no_reuse_for_recalibration_after_unblinding": true,
+    "any_model_source_change_invalidates_all_final_gates": true
+  }
+}

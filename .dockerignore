@@ -1,0 +1,9 @@
+.git
+.venv
+derived
+__pycache__
+*.pyc
+._*
+.DS_Store
+reviewer_full_run
+reviewer_full_run.log

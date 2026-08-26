@@ -1,0 +1,6 @@
+# Frozen v2.5 validation/execution environment (CPython 3.12.x).
+# Production and any resume invocation must install this exact lock; the
+# release manifest records this file's SHA-256.
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8

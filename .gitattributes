@@ -1,0 +1,3 @@
+# Preserve the exact archived bytes across platforms. Scientific CSV, JSON,
+# source, manifest, and log files must not undergo line-ending normalization.
+* -text

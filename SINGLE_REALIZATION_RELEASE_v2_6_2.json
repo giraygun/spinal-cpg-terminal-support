@@ -1,0 +1,34 @@
+{
+  "release_status": "GO_SINGLE_REALIZATION_V2_6_2",
+  "design_type": "frozen_single_realization_paired_mechanism_test",
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "model_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "fixed_seed": 601,
+  "fixed_structural_seed": 160601,
+  "analysis_task_count": 11686,
+  "unique_simulation_count": 3610,
+  "avoided_identical_recomputations": 8076,
+  "task_identity_sha256": "30857ac18a7944a18cc022270428758a91fff49721ffec152f12edc78fdff4bc",
+  "task_count_by_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 10800,
+    "G": 31,
+    "H": 72
+  },
+  "unique_simulations_within_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 3267,
+    "G": 31,
+    "H": 72
+  },
+  "model_equations_or_parameters_changed": false,
+  "stochastic_population_inference_authorized": false
+}

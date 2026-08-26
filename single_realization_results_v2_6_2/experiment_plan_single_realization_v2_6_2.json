@@ -1,0 +1,108 @@
+{
+  "schema": "single-realization-experiment-plan-1.0",
+  "runner_version": "single-realization-runner-2.6.2",
+  "design_type": "frozen_single_realization_paired_mechanism_test",
+  "scientific_valid": true,
+  "inferential_scope": "conditional_on_one_frozen_network_realization",
+  "stochastic_population_inference_authorized": false,
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "model_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "reference_runner_sha256": "40b13f694bbdf331bfb47da1f1d6c6f45e8c4e77a9eb23a173a750fff03ee3ea",
+  "execution_engine_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "single_realization_runner_sha256": "5b1b46d22d518f9e719ad45041478ff99a1aa0c9f7b9f002e1e45553cd732f0d",
+  "requirements_lock_sha256": "1dc77fadcd09957ee3fc596fd83ba9af0ada8a164f1d8002c99d17cbe585a359",
+  "stages": {
+    "A": "intact multi-context robustness",
+    "B": "single population/afferent ablations",
+    "C": "prespecified double ablations for route degeneracy",
+    "D": "external construct check of speed-dependent interneuron recruitment",
+    "E": "selective impairment of each MT slow-replenishment route",
+    "F": "full population-by-presynaptic-MT-route 2x2 specificity matrix",
+    "G": "long demand to exogenous vesicle-depletion challenge and functional recovery",
+    "H": "fast-KCa and MT mechanism falsification controls"
+  },
+  "seeds_by_stage": {
+    "A": [
+      601
+    ],
+    "B": [
+      601
+    ],
+    "C": [
+      601
+    ],
+    "D": [
+      601
+    ],
+    "E": [
+      601
+    ],
+    "F": [
+      601
+    ],
+    "G": [
+      601
+    ],
+    "H": [
+      601
+    ]
+  },
+  "fixed_seed": 601,
+  "fixed_structural_seed": 160601,
+  "analysis_task_count": 11686,
+  "unique_simulation_count": 3610,
+  "avoided_identical_recomputations": 8076,
+  "task_identity_sha256": "30857ac18a7944a18cc022270428758a91fff49721ffec152f12edc78fdff4bc",
+  "task_count_by_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 10800,
+    "G": 31,
+    "H": 72
+  },
+  "unique_simulations_within_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 3267,
+    "G": 31,
+    "H": 72
+  },
+  "preserved_axes": {
+    "neuron_or_afferent_classes": [
+      "RG",
+      "PF",
+      "MN",
+      "V0D",
+      "V0V",
+      "V2a",
+      "V3",
+      "V1Ia",
+      "V1Ren",
+      "V2b"
+    ],
+    "presynaptic_mt_routes": [
+      "RG",
+      "PF",
+      "MN",
+      "V0D",
+      "V0V",
+      "V2a",
+      "V3",
+      "V1Ia",
+      "V1Ren",
+      "V2b"
+    ],
+    "factorial_arms_per_class_route_pair": 4,
+    "contexts_per_factorial_arm": 27
+  },
+  "pairing_contract": "Every compared condition uses seed 601, structural seed 160601, and the simulator's deterministic yoked/random-stream rules.",
+  "statistical_unit_warning": "Task rows, routes, cells and contexts are not independent stochastic replicates. This run supplies one conditional mechanistic realization.",
+  "model_equations_or_parameters_changed": false,
+  "task_axes_other_than_seed_changed": false
+}

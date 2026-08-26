@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software or its frozen outputs, please cite this release. Software is licensed under BSD-3-Clause; frozen data and explicitly published derived outputs are licensed under CC BY 4.0."
+type: software
+title: "Frozen single-realization spinal locomotor CPG model and terminal-local MT-associated replenishment experiments"
+version: 2.6.2
+license: BSD-3-Clause
+authors:
+  - family-names: "Güneş"
+    given-names: "Giray"
+keywords:
+  - spinal central pattern generator
+  - locomotion
+  - phase stability
+  - synaptic vesicle replenishment
+  - microtubule-associated support
+  - computational neuroscience
+abstract: >-
+  Frozen code and outputs for one stochastic realization of a detailed spinal
+  locomotor network across the A-H perturbation matrix. The software is
+  BSD-3-Clause licensed; frozen and derived scientific data are CC-BY-4.0
+  licensed as specified in README.md and LICENSE-DATA.

@@ -1,0 +1,59 @@
+name: reproducibility
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reviewer-checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.13"
+          cache: pip
+      - name: Install locked reviewer environment
+        run: |
+          python -m pip install --upgrade pip==26.2.1
+          python -m pip install -r requirements-reviewer-lock.txt
+      - name: Verify frozen artifact
+        run: python reviewer_verify.py
+      - name: Run release-contract tests
+        run: python -B -m unittest -v test_single_realization_v2_6_2.py
+      - name: Run focused numerical tests
+        run: python -B test_numerics_architecture_v2_6_1.py
+      - name: Build the frozen matrix without simulation
+        run: |
+          python run_single_realization_v2_6_2.py \
+            --dry-run \
+            --outdir "${RUNNER_TEMP}/reviewer_matrix" \
+            --workers 1
+      - name: Reproduce the archived analysis without touching frozen outputs
+        run: >-
+          python reviewer_reproduce_analysis.py
+          "${RUNNER_TEMP}/reviewer_reanalysis"
+      - name: Run one-task technical smoke test
+        run: |
+          python run_ah_experiments_accelerated_v2_6_1.py \
+            --stage A \
+            --seeds 601 \
+            --outdir "${RUNNER_TEMP}/reviewer_numeric_smoke" \
+            --workers 1 \
+            --smoke \
+            --limit 1 \
+            --progress-every 1
+
+  container-checks:
+    runs-on: ubuntu-24.04
+    needs: reviewer-checks
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build reviewer container from the pinned base image
+        run: docker build --tag cpg-v2-6-2-reviewer:ci .
+      - name: Verify the packaged artifact inside the container
+        run: docker run --rm cpg-v2-6-2-reviewer:ci

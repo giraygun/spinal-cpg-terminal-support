@@ -1,0 +1,78 @@
+{
+  "release_status": "GO_FOR_SINGLE_PRODUCTION_RUN_V2_6_1",
+  "scientific_results_included": false,
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "model_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "execution_engine_sha256": "a0dc8a7338ab1619874135b1a3e8809f4eaa22394cb65dfd951544df5b62f47a",
+  "accelerated_runner_sha256": "18c6f86d57cca4f81e53c17000e3cb64bcccd7e4c5bece6b68b376a4fcdb6daa",
+  "reference_runner_sha256": "40b13f694bbdf331bfb47da1f1d6c6f45e8c4e77a9eb23a173a750fff03ee3ea",
+  "distributed_shard_runner_sha256": "603da198ce5d92d27b37f207bddde52399ca73615589eb50cb80a9b98298b166",
+  "requirements_lock_sha256": "1dc77fadcd09957ee3fc596fd83ba9af0ada8a164f1d8002c99d17cbe585a359",
+  "primary_analysis_sha256": "4da491968727d0b48e1fca89122af9541cb45fe18e43a184a3c7ae4ece98dd8d",
+  "preflight_sha256": "dcae60e31783467a8ca1736a290df77152fcabfe06f7f85e336635e4f044484a",
+  "dt_ms": 0.025,
+  "analysis_task_count": 245256,
+  "unique_simulation_count": 83796,
+  "task_identity_sha256": "cbc3322ed317bab95e891e3a35804ff0c0e2f1365dfcc772273dd893815d5214",
+  "numerical_validation_amended_passed": true,
+  "acceleration_equivalence_passed": true,
+  "calibration_values_match_frozen_config": true,
+  "pending_sentinel_count": 0,
+  "historical_failure_preserved": true,
+  "old_failure_reclassified": false,
+  "final_validation": {
+    "prospective_seed_manifest_sha256": "198080ad65c2599300cb5a6a8b055f8633b8d7be1e213423d6c9eb56cf0e14d2",
+    "mediator_calibration_sha256": "3ee3114b28c0294728b055416c79cb6e80918d0487a482ac33979b12a9b62f05",
+    "recruitment_calibration_sha256": "0036296af3d783511b943d276b406646574f9fc51752730a87b3bafe456ed56b",
+    "construct_report_sha256": "44de79f5de7cf83e889c6555186f276c910ec8543de93229dd8c12fc75911b45",
+    "construct_all_checks_pass": true,
+    "convergence_report_sha256": "cb4a3f7fb09f34c214e52de8b108ec39f1e748c6f9615d3879a4eb772b903351",
+    "convergence_all_checks_pass": true,
+    "stress_report_sha256": "e1ebe94b310972792971d6a7cefea858529303730978cff0a7666409c3491316",
+    "stress_all_checks_pass": true,
+    "reproducibility_report_sha256": "08dc345d30203de6ae23a75896cccbee1c97d7f1aa078e0e3488b9d7edb09237",
+    "reproducibility_all_checks_pass": true,
+    "shard_equivalence_report_sha256": "9d9d66bdd79f798b11c99c81bf89a41c5e3ee86923b3a8b6a776e431013b3c3d",
+    "shard_equivalence_pass": true
+  },
+  "numerical_method": {
+    "production_dt_ms": 0.025,
+    "convergence_comparator_dt_ms": 0.0125,
+    "membrane_integrator": "local_exponential_rosenbrock_with_event_time_inversion",
+    "phase_alignment_used_in_convergence": false
+  },
+  "biological_contract": {
+    "all_declared_classes_have_explicit_executable_equations": true,
+    "all_named_biological_interfaces_have_equations": true,
+    "V1Ia_and_V2b_each_population_engagement_checked": true,
+    "unsupported_unique_channel_claims": false,
+    "primary_endpoints_are_hidden_state_free": true,
+    "result_feedback_into_equations": false
+  },
+  "production_shard_manifest": {
+    "path": "PRODUCTION_SHARDS_v2_6_1.json",
+    "sha256": "9e0f69bc5420a85523866cace2df18c3d4573fc19434c416a840fa18ae9c32de",
+    "production_root": "/opt/cpg/production",
+    "shard_count": 3,
+    "assignment_sha256": "e15d454727d8ef6e69784c17e3a00aa75c4cdbb8c42239bed7f033aa6d21e4c1",
+    "equal_unique_simulation_counts": [27932, 27932, 27932],
+    "equal_estimated_work_units": [13774080000, 13774080000, 13774080000]
+  },
+  "historical_failed_artifacts": {
+    "v2_5_numerical_validation_report": "numerical_validation_amended_v2_5.json",
+    "v2_5_numerical_validation_sha256": "c64d696275c605ce80febbfe3755e08005675d34254503ac4731bc36fc191afd",
+    "v2_5_status_remains": "FAIL",
+    "v2_6_euler_convergence_report": "convergence_validation_final_candidate_v2_6.json",
+    "v2_6_status_remains": "FAIL"
+  },
+  "production_policy": {
+    "single_full_production_run_only": true,
+    "resume_same_output_root_allowed": true,
+    "second_output_root_forbidden": true,
+    "three_weighted_deterministic_shards": true,
+    "production_shard_manifest_created_only_after_cloud_root_is_fixed": true,
+    "production_shard_manifest_created": true,
+    "cloud_resources_created": false,
+    "cloud_cost_incurred": false
+  }
+}

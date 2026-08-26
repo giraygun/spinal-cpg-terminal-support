@@ -1,0 +1,131 @@
+{
+  "analysis_version": "single-realization-mechanistic-analysis-2.6.2",
+  "design_type": "frozen_single_realization_paired_mechanism_test",
+  "model_version": "distributed-local-terminal-mt-cpg-2.6.1-candidate",
+  "fixed_seed": 601,
+  "fixed_structural_seed": 160601,
+  "independent_stochastic_realization_count": 1,
+  "inferential_scope": "conditional_on_one_frozen_network_realization",
+  "stochastic_population_inference_authorized": false,
+  "routes_cells_contexts_are_independent_replicates": false,
+  "primary_family_count": 10,
+  "overall_interpretation": "not_all_preregistered_contrasts_favorable_within_frozen_realization",
+  "general_hypothesis_statistically_confirmed": false,
+  "general_hypothesis_statistically_rejected": false,
+  "interpretation_limit": "The result is a conditional mechanistic demonstration in seed 601; it does not quantify robustness across alternative network/noise realizations.",
+  "endpoint_contract_source": "analyze_primary_v2_6_1.py",
+  "preflight_report": "postrun_preflight_single_realization_v2_6_2.json",
+  "contrast_file": "single_realization_contrasts_v2_6_2.csv",
+  "family_results": [
+    {
+      "family": 1,
+      "endpoint": "lr_absolute_phase_error_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": -0.487052542253173,
+      "favorable_direction": "negative",
+      "direction_is_favorable": true,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "favorable_within_frozen_realization"
+    },
+    {
+      "family": 2,
+      "endpoint": "fe_absolute_phase_error_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": -0.202077752055013,
+      "favorable_direction": "negative",
+      "direction_is_favorable": true,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "favorable_within_frozen_realization"
+    },
+    {
+      "family": 3,
+      "endpoint": "lr_phase_slip_probability_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": -0.014777980381995265,
+      "favorable_direction": "negative",
+      "direction_is_favorable": true,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "favorable_within_frozen_realization"
+    },
+    {
+      "family": 4,
+      "endpoint": "fe_phase_slip_probability_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": 0.019064989388390973,
+      "favorable_direction": "negative",
+      "direction_is_favorable": false,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "unfavorable_within_frozen_realization"
+    },
+    {
+      "family": 5,
+      "endpoint": "bounded_cycle_interval_cv_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": 0.0028418998185212735,
+      "favorable_direction": "negative",
+      "direction_is_favorable": false,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "unfavorable_within_frozen_realization"
+    },
+    {
+      "family": 6,
+      "endpoint": "bilateral_mn_amplitude_imbalance_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": -0.00415507104893741,
+      "favorable_direction": "negative",
+      "direction_is_favorable": true,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "favorable_within_frozen_realization"
+    },
+    {
+      "family": 7,
+      "endpoint": "rg_to_pf_missed_transfer_probability_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": 0.0,
+      "favorable_direction": "negative",
+      "direction_is_favorable": false,
+      "zero_is_neutral": true,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "neutral_within_frozen_realization"
+    },
+    {
+      "family": 8,
+      "endpoint": "rg_to_mn_missed_transfer_probability_burden",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": 0.0,
+      "favorable_direction": "negative",
+      "direction_is_favorable": false,
+      "zero_is_neutral": true,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "neutral_within_frozen_realization"
+    },
+    {
+      "family": 9,
+      "endpoint": "four_second_nonrecovery_burden_s",
+      "contrast_definition": "dynamic_MT_minus_static_matched_MT",
+      "contrast_value": -0.19932500000000086,
+      "favorable_direction": "negative",
+      "direction_is_favorable": true,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "favorable_within_frozen_realization"
+    },
+    {
+      "family": 10,
+      "endpoint": "postchallenge_rg_to_mn_transfer_deficit_difference_in_differences",
+      "contrast_definition": "challenge_by_route_impairment_difference_in_differences_on_RG_to_MN_transfer",
+      "contrast_value": 0.00010347469237082935,
+      "favorable_direction": "negative",
+      "direction_is_favorable": false,
+      "zero_is_neutral": false,
+      "independent_stochastic_realization_count": 1,
+      "interpretation": "unfavorable_within_frozen_realization"
+    }
+  ]
+}

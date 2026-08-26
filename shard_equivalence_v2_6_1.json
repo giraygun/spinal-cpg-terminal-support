@@ -1,0 +1,16 @@
+{
+  "scientific_results": false,
+  "validation_kind": "single_runner_vs_three_shard_exact_checkpoint_equivalence",
+  "analysis_task_count": 3,
+  "unique_simulation_count": 3,
+  "shard_loads": [
+    10400,
+    10400,
+    10400
+  ],
+  "assignment_sha256": "e995af1685b7e29e174cc4f58d7b6a558d2d10cb77c7f4f357e5908c29fb3087",
+  "checkpoint_mismatches": [],
+  "exact_checkpoint_equivalence": true,
+  "compiled_metrics_created": true,
+  "passes": true
+}

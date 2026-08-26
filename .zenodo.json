@@ -1,0 +1,22 @@
+{
+  "creators": [
+    {
+      "name": "Güneş, Giray"
+    }
+  ],
+  "title": "Frozen single-realization spinal locomotor CPG model and terminal-local MT-associated replenishment experiments",
+  "version": "2.6.2",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "bsd-3-clause",
+  "language": "eng",
+  "description": "Frozen v2.6.1 scientific core, v2.6.2 single-realization overlay, and complete A-H outputs for seed 601 and structural seed 160601. Source code is licensed under BSD-3-Clause. Frozen data and explicitly published derived outputs are licensed under CC BY 4.0; see LICENSE and LICENSE-DATA.",
+  "keywords": [
+    "spinal central pattern generator",
+    "locomotion",
+    "phase stability",
+    "synaptic vesicle replenishment",
+    "microtubule-associated support",
+    "computational neuroscience"
+  ]
+}

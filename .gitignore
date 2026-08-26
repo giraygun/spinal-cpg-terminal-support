@@ -1,0 +1,10 @@
+.venv/
+derived/
+__pycache__/
+*.py[cod]
+._*
+.DS_Store
+reviewer_full_run/
+reviewer_full_run.log
+reviewer_matrix_dryrun/
+reviewer_numeric_smoke/

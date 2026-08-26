@@ -1,0 +1,50 @@
+{
+  "preflight_version": "single-realization-preflight-2.6.2",
+  "design_type": "frozen_single_realization_paired_mechanism_test",
+  "inferential_scope": "conditional_on_one_frozen_network_realization",
+  "stochastic_population_inference_authorized": false,
+  "fixed_seed": 601,
+  "fixed_structural_seed": 160601,
+  "analysis_task_count": 11686,
+  "unique_simulation_count": 3610,
+  "avoided_identical_recomputations": 8076,
+  "task_identity_sha256": "30857ac18a7944a18cc022270428758a91fff49721ffec152f12edc78fdff4bc",
+  "task_count_by_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 10800,
+    "G": 31,
+    "H": 72
+  },
+  "unique_simulations_within_stage": {
+    "A": 27,
+    "B": 270,
+    "C": 162,
+    "D": 54,
+    "E": 270,
+    "F": 3267,
+    "G": 31,
+    "H": 72
+  },
+  "checks": {
+    "frozen_model_and_release_contract": {
+      "pass": true
+    },
+    "task_matrix_identity": {
+      "pass": true
+    },
+    "immutable_experiment_plan": {
+      "pass": true
+    },
+    "analysis_task_index": {
+      "pass": true
+    },
+    "complete_exact_checkpoint_set": {
+      "pass": true
+    }
+  },
+  "all_checks_pass": true
+}
