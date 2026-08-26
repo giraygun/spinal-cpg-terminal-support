@@ -4,6 +4,13 @@ The frozen CSV/JSON outputs described here are licensed under CC BY 4.0; see
 `LICENSE-DATA`. This license statement does not turn task rows, contexts,
 routes, or model populations into independent biological replicates.
 
+The production workflow retained task definitions, per-simulation checkpoints,
+event and intervention records, epoch summaries, and derived metrics. It did
+not retain full continuous membrane-potential, spike-train, or other
+timestep-level time series. Accordingly, this dictionary describes the
+complete retained analysis dataset rather than continuous trajectories that
+were never stored.
+
 ## General conventions
 
 - Empty CSV fields mean not applicable or not observed for that task; they are

@@ -4,6 +4,7 @@ type: software
 title: "Frozen single-realization spinal locomotor CPG model and terminal-local MT-associated replenishment experiments"
 version: 2.6.2
 license: BSD-3-Clause
+repository-code: "https://github.com/giraygun/spinal-cpg-terminal-support"
 authors:
   - family-names: "Güneş"
     given-names: "Giray"

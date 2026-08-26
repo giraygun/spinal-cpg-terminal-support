@@ -4,6 +4,17 @@ This directory contains the read-only post-run analysis for the frozen
 single-realization experiment. The scripts read the archived result files;
 they neither modify nor rerun the simulator.
 
+## Protocol provenance and reviewer interface
+
+`ANALYSIS_PROTOCOL_LOCKED_2026-08-26.md` is the original Turkish-language
+analysis-lock record. Its reference to manuscript snapshot `v1_8` identifies
+the document used when the analysis contract was frozen; later language and
+layout revisions do not redefine endpoints, contrasts, pairing rules, or
+figures. `PROTOCOL_SPEC.json` and this README provide the machine-readable and
+English reviewer interfaces. Scientific identity is enforced by the frozen
+source hashes, expected counts, and semantic reference-output checks rather
+than by the current manuscript filename.
+
 ## Scientific scope
 
 The central analysis asks whether the detailed closed-loop locomotor network

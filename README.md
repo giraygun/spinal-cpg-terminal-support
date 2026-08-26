@@ -11,6 +11,11 @@ data, and figures are included under `manuscript_analysis_v2_6_2/`; they do not
 alter the frozen core or outputs. No final public tag or archival release has
 been issued yet.
 
+Development and reviewer repository:
+<https://github.com/giraygun/spinal-cpg-terminal-support>. The repository may
+remain private until the public release is approved; an immutable tagged
+release and archival DOI will supersede the moving `main` branch for citation.
+
 ## Scientific identity
 
 The version labels identify different layers:
@@ -53,6 +58,17 @@ The package therefore does not authorize p-values, confidence intervals,
 standard errors, degrees of freedom, or across-seed population inference.
 Results are conditional mechanistic observations within seed `601` and
 structural seed `160601`.
+
+## Retained-data scope
+
+The repository contains the complete dataset retained by the production
+workflow: the task matrix, one checkpoint per unique simulation, event and
+intervention records, epoch summaries, derived metrics, analysis tables, and
+figure data. Full continuous membrane-potential, spike-train, or other
+timestep-level time series were not retained during the production run and are
+therefore not part of this archive. References to "complete outputs" in this
+repository mean the complete retained analysis record, not unrecorded
+continuous trajectories.
 
 ## Quick start
 

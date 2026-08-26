@@ -14,6 +14,7 @@ to the biological model.
 | Endpoint contract | v2.6.1 locked analyzer | `analyze_primary_v2_6_1.py` | Defines the ten prespecified endpoint contrasts used unchanged in v2.6.2. |
 | Post-run audit | `single-realization-preflight-2.6.2` | preflight code and JSON | Verifies release, task, plan, index, and checkpoint completeness. |
 | Result analyzer | `single-realization-mechanistic-analysis-2.6.2` | analysis code and result JSON | Produces ten descriptive contrasts without inferential statistics. |
+| Manuscript analysis | `cpg-v2.6.2-manuscript-analysis-1.0` | `manuscript_analysis_v2_6_2/` | Read-only A-H analyses, Tables R1-R6, panel data, Figures 4-8, and semantic regression against curated reference outputs. |
 | Frozen outputs | v2.6.2 | `single_realization_results_v2_6_2/` | 11,686 task rows represented by 3,610 unique simulations. |
 
 `FREEZE_MANIFEST_v2_6_1.json` is a historical pre-production authorization
@@ -23,7 +24,8 @@ defined by `SINGLE_REALIZATION_RELEASE_v2_6_2.json`, the experiment plan,
 completion record, post-run preflight, and `RESULTS_CONTENTS_v2_6_2.sha256`.
 
 The software license is `BSD-3-Clause`; frozen and explicitly published
-derived scientific data use `CC-BY-4.0`. Publication identifiers will be added
-only after the manuscript analysis layer, reviewed repository, container, and
-persistent archive are finalized. No placeholder DOI or repository URL is part
-of the frozen identity.
+derived scientific data use `CC-BY-4.0`. Repository, release, container, and
+archival identifiers are publication metadata rather than part of the frozen
+scientific identity. A DOI will be added only after the reviewed repository,
+exact tag, release assets, and persistent archive are finalized; no placeholder
+identifier is used.

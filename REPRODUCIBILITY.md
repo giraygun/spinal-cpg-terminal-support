@@ -127,6 +127,21 @@ The Git tag, Git commit, container digest, Zenodo version DOI, and Zenodo concep
 DOI must be recorded together after publication. Any correction must receive a
 new version; the v2.6.2 tag and assets must not be replaced.
 
+Release assets must be built from the exact reviewed tag, never by archiving a
+working directory. After clean CI and creation of the final tag:
+
+```bash
+git archive --format=tar.gz \
+  --prefix=spinal-cpg-terminal-support-v2.6.2/ \
+  --output=spinal-cpg-terminal-support-v2.6.2.tar.gz \
+  v2.6.2
+sha256sum spinal-cpg-terminal-support-v2.6.2.tar.gz
+```
+
+This excludes `.git`, ignored reanalysis directories, bytecode caches, and
+other workstation state by construction. The byte-for-byte original production
+archive remains a separate provenance asset.
+
 The author approved `BSD-3-Clause` for code and `CC-BY-4.0` for frozen and
 derived scientific data on 2026-08-26. The manuscript-specific table/figure
 analysis layer is now included and must remain CI-validated. Final references,
