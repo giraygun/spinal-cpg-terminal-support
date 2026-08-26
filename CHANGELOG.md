@@ -20,10 +20,14 @@
   the exact unredacted log remains in the preserved original archive.
 - Applies the author-approved BSD 3-Clause license to software and CC BY 4.0
   to frozen and explicitly published derived scientific data.
-- Defers the immutable GitHub `v2.6.2` release and Zenodo deposit until the
-  updated analysis layer passes clean remote CI and the final manuscript and
-  administrative metadata are fixed; the frozen model equations, parameters,
-  and outputs remain unchanged.
+- Publishes the validated curated package through the fixed GitHub `v2.6.2`
+  release after clean remote CI; the release is then archived through the
+  enabled Zenodo integration. The frozen model equations, parameters, and
+  outputs remain unchanged.
+- Keeps the byte-identical original workstation archive private because it
+  contains local ownership/path and macOS metadata. The public curated release
+  preserves every scientifically relevant file and changes only the local path
+  displayed in the historical log.
 - Extends the reviewer verifier and CI to check full curated-package coverage,
   reproduce both the archived and manuscript analyses, compare publication
   outputs semantically, and build/run the pinned reviewer container.

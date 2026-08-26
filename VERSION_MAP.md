@@ -26,6 +26,6 @@ completion record, post-run preflight, and `RESULTS_CONTENTS_v2_6_2.sha256`.
 The software license is `BSD-3-Clause`; frozen and explicitly published
 derived scientific data use `CC-BY-4.0`. Repository, release, container, and
 archival identifiers are publication metadata rather than part of the frozen
-scientific identity. A DOI will be added only after the reviewed repository,
-exact tag, release assets, and persistent archive are finalized; no placeholder
-identifier is used.
+scientific identity. The Zenodo version DOI is recorded only after the reviewed
+repository, exact tag, release assets, and persistent record are finalized; no
+placeholder identifier is used.

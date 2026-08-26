@@ -5,16 +5,15 @@ A-H experimental design, the v2.6.2 single-realization execution overlay, and
 the complete outputs used for the accompanying manuscript on terminal-local,
 MT-associated slow vesicle replenishment.
 
-**Status:** this is a validated prepublication package. The frozen simulator and
-completed outputs are final. The read-only manuscript analysis, tables, panel
-data, and figures are included under `manuscript_analysis_v2_6_2/`; they do not
-alter the frozen core or outputs. No final public tag or archival release has
-been issued yet.
+**Status:** this is the validated public v2.6.2 release package. The frozen
+simulator and completed outputs are final. The read-only manuscript analysis,
+tables, panel data, and figures are included under
+`manuscript_analysis_v2_6_2/`; they do not alter the frozen core or outputs.
 
-Development and reviewer repository:
-<https://github.com/giraygun/spinal-cpg-terminal-support>. The repository may
-remain private until the public release is approved; an immutable tagged
-release and archival DOI will supersede the moving `main` branch for citation.
+Canonical repository:
+<https://github.com/giraygun/spinal-cpg-terminal-support>. For citation, use the
+fixed `v2.6.2` GitHub release and its Zenodo version DOI rather than the moving
+`main` branch.
 
 ## Scientific identity
 
@@ -179,8 +178,14 @@ the historical log.
   workstation path redacted; the byte-identical raw log remains in the preserved
   original archive.
 
-The original production archive is preserved separately, byte-for-byte, with
+The original production archive is preserved privately, byte-for-byte, with
 SHA-256 `2c90e852304fed10ea37702ad39f2555569ea4b2cc033a67c449fddf01bc4b7f`.
+It is not published because its tar ownership fields, AppleDouble metadata,
+compiled bytecode, and unredacted log disclose a local workstation identity and
+path. The public repository retains all 3,652 scientifically relevant original
+files: 3,651 are byte-identical, and the sole textual change replaces the local
+path in the historical log with `<LOCAL_PATH>`. No scientific or timing value
+was changed.
 
 ## Licensing
 

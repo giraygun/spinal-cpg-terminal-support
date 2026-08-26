@@ -111,24 +111,29 @@ The output is valid only if the terminal log ends with
 
 ## Public release architecture
 
-The curated repository will be published on GitHub. The working `main` branch
-may be made public while manuscript metadata are completed, but the immutable
-`v2.6.2` tag and release must be created only after the manuscript analysis and
-the final reference/administrative fields pass the clean CI workflow. All
-release assets should be attached to a draft before publication.
-That exact release will then be archived in Zenodo to obtain a version DOI.
+The curated repository is public on GitHub. The fixed `v2.6.2` tag and release
+are created only after the manuscript analysis and all reviewer checks pass the
+clean CI workflow. The release job builds a curated archive directly from the
+reviewed commit, records its SHA-256 value, and creates a draft containing both
+files. The draft is published only after the repository has been enabled in the
+Zenodo GitHub integration. That exact release is then archived by Zenodo to
+obtain a version DOI.
 
-The persistent record should contain both:
-
-1. the original production archive, byte-for-byte; and
-2. the curated reviewer package with its full checksum manifest.
+The byte-identical original workstation archive remains privately preserved
+under SHA-256
+`2c90e852304fed10ea37702ad39f2555569ea4b2cc033a67c449fddf01bc4b7f`.
+It is not a public asset because tar ownership fields, AppleDouble records,
+compiled bytecode, and the unredacted execution log contain local workstation
+metadata. The curated release retains every scientifically relevant original
+file; 3,651 are byte-identical and the only textual change replaces the local
+workstation path in the historical log with `<LOCAL_PATH>`.
 
 The Git tag, Git commit, container digest, Zenodo version DOI, and Zenodo concept
 DOI must be recorded together after publication. Any correction must receive a
 new version; the v2.6.2 tag and assets must not be replaced.
 
-Release assets must be built from the exact reviewed tag, never by archiving a
-working directory. After clean CI and creation of the final tag:
+Release assets must be built from the exact reviewed commit or tag, never by
+archiving a working directory. The release workflow runs the equivalent of:
 
 ```bash
 git archive --format=tar.gz \
@@ -139,8 +144,9 @@ sha256sum spinal-cpg-terminal-support-v2.6.2.tar.gz
 ```
 
 This excludes `.git`, ignored reanalysis directories, bytecode caches, and
-other workstation state by construction. The byte-for-byte original production
-archive remains a separate provenance asset.
+other workstation state by construction. The private original-archive hash and
+the public curated-package manifest jointly preserve provenance without
+publishing local workstation identifiers.
 
 The author approved `BSD-3-Clause` for code and `CC-BY-4.0` for frozen and
 derived scientific data on 2026-08-26. The manuscript-specific table/figure
